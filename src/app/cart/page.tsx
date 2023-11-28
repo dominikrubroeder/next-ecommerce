@@ -1,7 +1,7 @@
 export default async function CartPage() {
   return (
-    <div>
-      <h1>Hello, world – Cart</h1>
+    <div className="p-4">
+      <h1 className="text-2xl">Hello, world – Cart</h1>
     </div>
   );
 }

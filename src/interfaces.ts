@@ -6,4 +6,11 @@ export interface Product {
   variants: Product[];
   manufacturer: string;
   fullPath: string;
+  category: string;
+}
+
+export interface Category {
+  id: number;
+  title: string;
+  fullPath: string;
 }
