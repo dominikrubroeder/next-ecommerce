@@ -27,7 +27,9 @@
       ],
       "manufacturer": "Manufacturer Inc.",
       "fullPath": "/product/1",
-      "category": "Snowboarding"
+      "category": "Snowboarding",
+      "images": [],
+      "galleryImages": []
     },
     {
       "id": 2,
@@ -56,7 +58,9 @@
       ],
       "manufacturer": "Manufacturer Inc.",
       "fullPath": "/product/2",
-      "category": "Snowboarding"
+      "category": "Snowboarding",
+      "images": [],
+      "galleryImages": []
     },
     {
       "id": 3,
@@ -85,7 +89,26 @@
       ],
       "manufacturer": "Manufacturer Inc.",
       "fullPath": "/product/3",
-      "category": "Ski"
+      "category": "Ski",
+      "images": [],
+      "galleryImages": []
+    },
+    {
+      "id": 4,
+      "title": "Apple iPhone",
+      "price": 1499,
+      "description": "This is the iPhone description. More variants available",
+      "variants": [],
+      "manufacturer": "Apple",
+      "fullPath": "/product/apple-iphone",
+      "category": "Tech",
+      "images": [
+        "/products/iphone-15-pro-01.jpeg"
+      ],
+      "galleryImages": [
+        "/products/iphone-15-pro-gallery-01.jpeg",
+        "/products/iphone-15-pro-gallery-02.jpeg"
+      ]
     }
   ],
   "categories": [

@@ -25,7 +25,7 @@ export default async function ProductPage({
       <ul className="mt-4 grid gap-2">
         {products.map((product) => (
           <li key={product.id}>
-            <Link href={product.fullPath}>Show Product {product.id}</Link>
+            <Link href={product.fullPath}>Show {product.title}</Link>
           </li>
         ))}
       </ul>

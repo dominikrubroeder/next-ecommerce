@@ -28,13 +28,17 @@ export default async function CategoryPage({
   return (
     <div className="p-4">
       <h1 className="text-2xl">Hello, world – Category `{params.handle}`</h1>
-      <ul className="mt-4 grid gap-2">
+      <ul className="mb-2 mt-4 grid gap-2">
         {products.map((product) => (
           <li key={product.id}>
-            <Link href={product.fullPath}>Show Product {product.id}</Link>
+            <Link href={product.fullPath}>Show {product.title}</Link>
           </li>
         ))}
       </ul>
+      <Link href="/category" className="flex items-center gap-2">
+        <ArrowLongLeftIcon className="h-5 w-5" />
+        Back
+      </Link>
     </div>
   );
 }

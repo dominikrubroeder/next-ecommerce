@@ -1,5 +1,6 @@
 import { Category, Product } from "@/src/interfaces";
 import { promises as fs } from "fs";
+import { formatProductTitle } from "@/src/helpers";
 
 export async function getData(): Promise<{
   products: Product[];
@@ -52,8 +53,12 @@ export async function getProducts(
 export async function getProduct(handle: string): Promise<Product | undefined> {
   const { products } = await getData();
 
+  console.log(formatProductTitle(handle));
+
   return products.find(
-    (product) => product.id.toString() === handle || product.title === handle,
+    (product) =>
+      product.id.toString() === handle ||
+      formatProductTitle(product.title) === formatProductTitle(handle),
   );
 }
 

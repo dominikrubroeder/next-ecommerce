@@ -19,6 +19,11 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={inter.className}>
+        {/**
+         <small className="mx-auto my-2 block">
+         <InlineBadge>Not a real project. For Demo purposes only.</InlineBadge>
+         </small>
+         */}
         <Header />
         <main>{children}</main>
         <Footer />

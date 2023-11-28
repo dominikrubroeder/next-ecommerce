@@ -7,6 +7,8 @@ export interface Product {
   manufacturer: string;
   fullPath: string;
   category: string;
+  images: string[];
+  galleryImages: string[];
 }
 
 export interface Category {
