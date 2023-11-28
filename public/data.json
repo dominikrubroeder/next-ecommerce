@@ -1,0 +1,60 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "title": "Product 1",
+      "price": 99.99,
+      "description": "This is Product 1, and it's super amazing",
+      "variants": [
+        {
+          "id": "1-01",
+          "title": "Product 1 – Variant 1",
+          "price": 99.99,
+          "description": "This is Product 1, and it's super amazing"
+        },
+        {
+          "id": "1-02",
+          "title": "Product 1 – Variant 2",
+          "price": 102.99,
+          "description": "This is Product 2, and it's super amazing"
+        },
+        {
+          "id": "1-03",
+          "title": "Product 1 – Variant 3",
+          "price": 110,
+          "description": "This is Product 1, and it's super amazing"
+        }
+      ],
+      "manufacturer": "Manufacturer Inc.",
+      "fullPath": "/product/1"
+    },
+    {
+      "id": 2,
+      "title": "Product 2",
+      "price": 129.99,
+      "description": "This is Product 2, and it's super amazing",
+      "variants": [
+        {
+          "id": "2-01",
+          "title": "Product 2 – Variant 1",
+          "price": 129.99,
+          "description": "This is Product 2, and it's super amazing"
+        },
+        {
+          "id": "2-02",
+          "title": "Product 2 – Variant 2",
+          "price": 135,
+          "description": "This is Product 2, and it's super amazing"
+        },
+        {
+          "id": "2-03",
+          "title": "Product 2 – Variant 3",
+          "price": 148,
+          "description": "This is Product 2, and it's super amazing"
+        }
+      ],
+      "manufacturer": "Manufacturer Inc.",
+      "fullPath": "/product/2"
+    }
+  ]
+}
