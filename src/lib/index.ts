@@ -15,7 +15,7 @@ export async function getData(): Promise<{
 }
 
 export async function getProducts(
-  filter?: "category",
+  filter?: "category" | "search",
   filterValue?: string,
 ): Promise<Product[]> {
   const { products } = await getData();
@@ -30,6 +30,20 @@ export async function getProducts(
         (product) =>
           product.category.toLowerCase() === filterValue.toLowerCase(),
       );
+    case "search":
+      const productsByProductTitle = products.filter((product) =>
+        product.title.toLowerCase().includes(filterValue.toLowerCase()),
+      );
+
+      if (productsByProductTitle.length > 0) return productsByProductTitle;
+
+      const productsByCategory = products.filter((product) =>
+        product.category.toLowerCase().includes(filterValue.toLowerCase()),
+      );
+
+      if (productsByCategory.length > 0) return productsByCategory;
+
+      return [];
     default:
       return products;
   }
