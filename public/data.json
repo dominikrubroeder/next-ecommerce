@@ -26,7 +26,8 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/1"
+      "fullPath": "/product/1",
+      "category": "Snowboarding"
     },
     {
       "id": 2,
@@ -54,10 +55,11 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/2"
+      "fullPath": "/product/2",
+      "category": "Snowboarding"
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Product 3",
       "price": 78,
       "description": "This is Product 3, and it's super amazing",
@@ -82,7 +84,30 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/3"
+      "fullPath": "/product/3",
+      "category": "Ski"
+    }
+  ],
+  "categories": [
+    {
+      "id": 1,
+      "title": "Snowboarding",
+      "fullPath": "/category/snowboarding"
+    },
+    {
+      "id": 2,
+      "title": "Ski",
+      "fullPath": "/category/ski"
+    },
+    {
+      "id": 3,
+      "title": "Tech",
+      "fullPath": "/category/tech"
+    },
+    {
+      "id": 4,
+      "title": "Accessories",
+      "fullPath": "/category/accessories"
     }
   ]
 }
