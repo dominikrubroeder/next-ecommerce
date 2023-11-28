@@ -1,8 +1,8 @@
 import Link from "next/link";
-import { getProducts } from "@/src/lib";
+import { Product } from "@/src/interfaces";
 
 export default async function ProductPage() {
-  const products = await getProducts();
+  const products: Product[] = [];
 
   return (
     <div>
