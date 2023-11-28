@@ -1,20 +1,24 @@
 import Link from "next/link";
 import { getCategories } from "@/src/lib";
+import { Suspense } from "react";
+import Loading from "@/src/app/category/loading";
 
 export default async function CategoryPage() {
   const categories = await getCategories();
 
   return (
-    <div className="p-4">
-      <h1 className="text-2xl">Hello, world – All Categories</h1>
+    <Suspense fallback={<Loading />}>
+      <div className="p-4">
+        <h1 className="text-2xl">Hello, world – All Categories</h1>
 
-      <ul className="mt-4 grid gap-2">
-        {categories.map((category) => (
-          <li key={category.id}>
-            <Link href={category.fullPath}>Show {category.title}</Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+        <ul className="mt-4 grid gap-2">
+          {categories.map((category) => (
+            <li key={category.id}>
+              <Link href={category.fullPath}>Show {category.title}</Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </Suspense>
   );
 }
