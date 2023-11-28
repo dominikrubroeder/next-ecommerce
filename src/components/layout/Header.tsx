@@ -1,10 +1,11 @@
 import Link from "next/link";
+import Search from "@/src/components/Search";
 
 export default function Header() {
   return (
-    <header>
+    <header className="flex flex-wrap items-center justify-between gap-2 p-4">
       <nav>
-        <ul className="flex flex-wrap gap-2 p-4">
+        <ul className="flex flex-wrap gap-2">
           <li>
             <Link href="/">Home</Link>
           </li>
@@ -25,6 +26,8 @@ export default function Header() {
           </li>
         </ul>
       </nav>
+
+      <Search placeholder="Products ..." />
     </header>
   );
 }

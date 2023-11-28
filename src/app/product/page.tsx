@@ -1,8 +1,16 @@
 import Link from "next/link";
 import { getProducts } from "@/src/lib";
 
-export default async function ProductPage() {
-  const products = await getProducts();
+export default async function ProductPage({
+  searchParams,
+}: {
+  searchParams: {
+    search?: string;
+  };
+}) {
+  const products = searchParams.search
+    ? await getProducts("category", searchParams.search)
+    : await getProducts();
 
   return (
     <div className="p-4">
