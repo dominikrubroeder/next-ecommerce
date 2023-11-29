@@ -1,6 +1,6 @@
-import { getProducts } from "@/src/lib";
+import { getProducts } from "@/lib";
 import Link from "next/link";
-import InlineBadge from "@/src/components/InlineBadge";
+import InlineBadge from "@/components/InlineBadge";
 import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
 
 export default async function CategoryPage({

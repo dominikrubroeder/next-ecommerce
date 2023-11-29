@@ -1,6 +1,6 @@
 import Link from "next/link";
-import { getProducts } from "@/src/lib";
-import InlineBadge from "@/src/components/InlineBadge";
+import { getProducts } from "@/lib";
+import InlineBadge from "@/components/InlineBadge";
 
 export default async function ProductPage({
   searchParams,

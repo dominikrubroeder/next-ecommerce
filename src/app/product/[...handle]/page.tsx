@@ -1,11 +1,11 @@
 import { Suspense } from "react";
-import Loading from "@/src/app/product/[...handle]/loading";
-import { getProduct } from "@/src/lib";
-import InlineBadge from "@/src/components/InlineBadge";
+import Loading from "@/app/product/[...handle]/loading";
+import { getProduct } from "@/lib";
+import InlineBadge from "@/components/InlineBadge";
 import Image from "next/image";
 import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-import Accordion from "@/src/components/Accordion";
+import Accordion from "@/components/Accordion";
 
 export default async function ProductPage({
   params,

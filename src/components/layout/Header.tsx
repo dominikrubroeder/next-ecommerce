@@ -1,5 +1,6 @@
 import Link from "next/link";
-import Search from "@/src/components/Search";
+import Search from "@/components/Search";
+import { Suspense } from "react";
 
 export default function Header() {
   return (
@@ -27,7 +28,9 @@ export default function Header() {
         </ul>
       </nav>
 
-      <Search placeholder="Products ..." />
+      <Suspense fallback={<div>Loading search...</div>}>
+        <Search placeholder="Products ..." />
+      </Suspense>
     </header>
   );
 }

@@ -1,7 +1,7 @@
 import Link from "next/link";
-import { getCategories } from "@/src/lib";
+import { getCategories } from "@/lib";
 import { Suspense } from "react";
-import Loading from "@/src/app/category/loading";
+import Loading from "@/app/category/loading";
 
 export default async function CategoryPage() {
   const categories = await getCategories();
