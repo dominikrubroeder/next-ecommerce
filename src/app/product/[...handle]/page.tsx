@@ -2,7 +2,6 @@ import { Suspense } from "react";
 import Loading from "@/app/product/[...handle]/loading";
 import { getProduct } from "@/lib";
 import InlineBadge from "@/components/InlineBadge";
-import Image from "next/image";
 import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Accordion from "@/components/Accordion";
@@ -26,20 +25,9 @@ export default async function ProductPage({
       </div>
 
       <section className="mx-auto grid max-w-screen-lg grid-cols-2">
-        {product.images.length > 0 ? (
-          <Image
-            src={product.images[0]}
-            width={300}
-            height={300}
-            className="object-contain p-4"
-            alt={product.title + " image 01"}
-            priority
-          />
-        ) : (
-          <div className="flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100 p-4">
-            <PhotoIcon className="h-20 w-20 text-gray-200" />
-          </div>
-        )}
+        <div className="flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100 p-4">
+          <PhotoIcon className="h-20 w-20 text-gray-200" />
+        </div>
 
         <div>
           <h2>{product.manufacturer}</h2>
