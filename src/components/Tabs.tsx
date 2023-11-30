@@ -1,29 +1,18 @@
 "use client";
 
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
-import { useCallback } from "react";
 import { getTabContent } from "@/helpers";
+import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function Tabs({
   tabs,
 }: {
   tabs: { title: string; content: string }[];
 }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  const { router, pathname, searchParams, createQueryString } =
+    useUpdateSearchParams();
+
   const searchParamsTab = searchParams.get("tab");
   const { tabContent } = getTabContent(tabs, searchParamsTab);
-
-  const createQueryString = useCallback(
-    (name: string, value: string) => {
-      const params = new URLSearchParams(searchParams);
-      params.set(name, value);
-
-      return params.toString();
-    },
-    [searchParams],
-  );
 
   if (tabs === undefined) return null;
 

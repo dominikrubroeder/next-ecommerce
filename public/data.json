@@ -118,7 +118,7 @@
           "content": "Tab 1 content"
         },
         {
-          "title": "Technical notes",
+          "title": "Tech specs",
           "content": "Tab 2 content"
         },
         {
@@ -130,7 +130,7 @@
           "content": "Tab 4 content"
         },
         {
-          "title": "Tab 5",
+          "title": "Environment notes",
           "content": "Tab 5 content"
         }
       ]

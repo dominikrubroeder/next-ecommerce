@@ -10,7 +10,9 @@ export const getTabContent = (
     (tab) => tab.title.toLowerCase() === searchParamsTab,
   )
     ? tabs.find((tab) => tab.title.toLowerCase() === searchParamsTab)?.content
-    : tabs[0].content;
+    : tabs.length > 0
+      ? tabs[0].content
+      : undefined;
 
   return { tabContent: searchParamsTabContent };
 };
