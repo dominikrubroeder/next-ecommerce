@@ -6,6 +6,7 @@ import Image from "next/image";
 import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Accordion from "@/components/Accordion";
+import Tabs from "@/components/Tabs";
 
 export default async function ProductPage({
   params,
@@ -13,9 +14,6 @@ export default async function ProductPage({
   params: { handle: string[] };
 }) {
   const product = await getProduct(params.handle[0]);
-
-  console.log(product);
-  console.log(params.handle[0]);
 
   if (product === undefined) return null;
 
@@ -53,15 +51,18 @@ export default async function ProductPage({
             </small>
           </h1>
 
+          <p>{product.description}</p>
+
           <ul className="mt-4 grid gap-2">
-            <li>
-              <Accordion title="Description" content={product.description} />
-            </li>
             <li>
               <Accordion title="Description" content={product.description} />
             </li>
           </ul>
         </div>
+      </section>
+
+      <section className="p-4">
+        <Tabs tabs={product.tabs} />
       </section>
     </Suspense>
   );

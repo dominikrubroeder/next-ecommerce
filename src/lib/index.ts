@@ -53,8 +53,6 @@ export async function getProducts(
 export async function getProduct(handle: string): Promise<Product | undefined> {
   const { products } = await getData();
 
-  console.log(formatProductTitle(handle));
-
   return products.find(
     (product) =>
       product.id.toString() === handle ||
