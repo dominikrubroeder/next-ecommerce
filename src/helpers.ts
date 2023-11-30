@@ -6,14 +6,15 @@ export const getTabContent = (
   tabs: { title: string; content: string }[],
   searchParamsTab: string | null,
 ) => {
-  if (tabs === undefined || tabs === null) return { tabContent: undefined };
+  if (tabs === undefined || tabs === null || tabs.length === 0)
+    return { tabContent: undefined };
 
   const searchParamsTabContent = tabs.find(
     (tab) => tab.title.toLowerCase() === searchParamsTab,
   )
     ? tabs.find((tab) => tab.title.toLowerCase() === searchParamsTab)?.content
     : tabs.length > 0
-      ? tabs[0].content
+      ? tabs[0]?.content
       : undefined;
 
   return { tabContent: searchParamsTabContent };
