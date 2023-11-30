@@ -6,7 +6,6 @@ import Image from "next/image";
 import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Accordion from "@/components/Accordion";
-import Tabs from "@/components/Tabs";
 
 export default async function ProductPage({
   params,
@@ -59,10 +58,6 @@ export default async function ProductPage({
             </li>
           </ul>
         </div>
-      </section>
-
-      <section className="p-4">
-        <Tabs tabs={product.tabs} />
       </section>
     </Suspense>
   );
