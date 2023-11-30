@@ -6,6 +6,8 @@ export const getTabContent = (
   tabs: { title: string; content: string }[],
   searchParamsTab: string | null,
 ) => {
+  if (tabs === undefined || tabs === null) return { tabContent: undefined };
+
   const searchParamsTabContent = tabs.find(
     (tab) => tab.title.toLowerCase() === searchParamsTab,
   )
