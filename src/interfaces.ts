@@ -9,6 +9,7 @@ export interface Product {
   category: string;
   images: string[];
   galleryImages: string[];
+  tabs: { title: string; content: string }[];
 }
 
 export interface Category {
