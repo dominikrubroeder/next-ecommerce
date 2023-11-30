@@ -2,9 +2,11 @@ import { Suspense } from "react";
 import Loading from "@/app/product/[...handle]/loading";
 import { getProduct } from "@/lib";
 import InlineBadge from "@/components/InlineBadge";
+import Image from "next/image";
 import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Accordion from "@/components/Accordion";
+import Tabs from "@/components/Tabs";
 
 export default async function ProductPage({
   params,
@@ -25,27 +27,42 @@ export default async function ProductPage({
       </div>
 
       <section className="mx-auto grid max-w-screen-lg grid-cols-2">
-        <div className="flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100 p-4">
-          <PhotoIcon className="h-20 w-20 text-gray-200" />
-        </div>
+        {product?.images.length > 0 ? (
+          <Image
+            src={product?.images[0]}
+            width={300}
+            height={300}
+            className="object-contain p-4"
+            alt={product?.title + " image 01"}
+            priority
+          />
+        ) : (
+          <div className="flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100 p-4">
+            <PhotoIcon className="h-20 w-20 text-gray-200" />
+          </div>
+        )}
 
         <div>
-          <h2>{product.manufacturer}</h2>
+          <h2>{product?.manufacturer}</h2>
           <h1 className="text-2xl">
-            Product `{product.title}`
+            Product `{product?.title}`
             <small className="ml-2">
-              <InlineBadge>{product.id}</InlineBadge>
+              <InlineBadge>{product?.id}</InlineBadge>
             </small>
           </h1>
 
-          <p>{product.description}</p>
+          <p>{product?.description}</p>
 
           <ul className="mt-4 grid gap-2">
             <li>
-              <Accordion title="Description" content={product.description} />
+              <Accordion title="Description" content={product?.description} />
             </li>
           </ul>
         </div>
+      </section>
+
+      <section className="p-4">
+        <Tabs tabs={product?.tabs} />
       </section>
     </Suspense>
   );
