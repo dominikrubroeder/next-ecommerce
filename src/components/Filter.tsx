@@ -39,8 +39,8 @@ export default function Filter() {
           <label className="flex items-center gap-2 font-normal">
             <input
               type="checkbox"
-              onChange={() => onClick("price-under-100")}
-              checked={appliedFilters.includes("price-under-100")}
+              onChange={() => onClick("price-under-50")}
+              checked={appliedFilters.includes("price-under-50")}
             />
             Under 50€
           </label>
