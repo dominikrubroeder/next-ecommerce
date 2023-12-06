@@ -11,7 +11,7 @@ export async function getData(): Promise<{
     return JSON.parse(res);
   } else {
     const res = await fetch("https://next-ecomm-one.vercel.app/data.json", {
-      cache: "no-store",
+      next: { revalidate: 300 },
     });
     return res.json();
   }
