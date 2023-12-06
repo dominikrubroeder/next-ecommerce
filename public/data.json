@@ -134,6 +134,34 @@
           "content": "Tab 5 content"
         }
       ]
+    },
+    {
+      "id": 5,
+      "title": "Product 5",
+      "price": 84.99,
+      "description": "This is Product 5, and it's super amazing",
+      "variants": [
+        {
+          "id": "5-01",
+          "title": "Product 5 – Variant 1",
+          "price": 78,
+          "description": "This is Product 5, and it's super amazing"
+        },
+        {
+          "id": "5-02",
+          "title": "Product 5 – Variant 2",
+          "price": 122,
+          "description": "This is Product 5, and it's super amazing"
+        }
+      ],
+      "manufacturer": "Manufacturer Inc.",
+      "fullPath": "/product/5",
+      "category": "Snowboarding",
+      "images": [],
+      "galleryImages": [
+        "/products/iphone-15-pro-gallery-02.jpeg"
+      ],
+      "tabs": []
     }
   ],
   "categories": [
