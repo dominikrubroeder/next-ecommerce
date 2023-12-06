@@ -2,6 +2,7 @@ import { getProducts } from "@/lib";
 import Link from "next/link";
 import InlineBadge from "@/components/InlineBadge";
 import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
+import ProductCard from "@/components/ProductCard";
 
 export default async function CategoryPage({
   params,
@@ -27,18 +28,24 @@ export default async function CategoryPage({
 
   return (
     <div className="p-4">
-      <h1 className="text-2xl">Hello, world – Category `{params.handle}`</h1>
-      <ul className="mb-2 mt-4 grid gap-2">
-        {products.map((product) => (
-          <li key={product.id}>
-            <Link href={product.fullPath}>Show {product.title}</Link>
-          </li>
-        ))}
-      </ul>
-      <Link href="/category" className="flex items-center gap-2">
+      <h1 className="inline-block border-b pb-4 text-2xl">
+        Products for Category <InlineBadge>{params.handle}</InlineBadge>
+      </h1>
+
+      <Link href="/category" className="my-4 flex items-center gap-2">
         <ArrowLongLeftIcon className="h-5 w-5" />
         Back
       </Link>
+
+      <ul className="grid grid-cols-3 gap-8">
+        {products.map((product) => (
+          <li key={product.id}>
+            <Link href={product.fullPath}>
+              <ProductCard product={product} />
+            </Link>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }

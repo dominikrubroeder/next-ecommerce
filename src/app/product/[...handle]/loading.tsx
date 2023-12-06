@@ -1,6 +1,6 @@
 export default function Loading() {
   return (
-    <div className="mx-auto grid max-w-screen-lg grid-cols-2">
+    <div className="mx-auto mt-8 grid max-w-screen-lg grid-cols-2">
       <div className="h-64 w-64 animate-pulse rounded-2xl bg-gray-100 p-4"></div>
 
       <div>

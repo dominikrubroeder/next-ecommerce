@@ -9,7 +9,7 @@ export default async function CategoryPage() {
   return (
     <Suspense fallback={<Loading />}>
       <div className="p-4">
-        <h1 className="text-2xl">Hello, world – All Categories</h1>
+        <h1 className="text-2xl">All Categories</h1>
 
         <ul className="mt-4 grid gap-2">
           {categories.map((category) => (

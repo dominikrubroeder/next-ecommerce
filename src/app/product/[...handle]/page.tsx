@@ -1,7 +1,6 @@
 import { Suspense } from "react";
 import Loading from "@/app/product/[...handle]/loading";
 import { getProduct } from "@/lib";
-import InlineBadge from "@/components/InlineBadge";
 import Image from "next/image";
 import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
@@ -43,13 +42,12 @@ export default async function ProductPage({
         )}
 
         <div>
-          <h2>{product?.manufacturer}</h2>
-          <h1 className="text-2xl">
-            Product `{product?.title}`
-            <small className="ml-2">
-              <InlineBadge>{product?.id}</InlineBadge>
-            </small>
-          </h1>
+          <div className="flex flex-wrap items-center justify-between gap-2">
+            <h2>{product?.manufacturer}</h2>
+            <small className="ml-2 text-gray-400">{product?.id}</small>
+          </div>
+
+          <h1 className="text-2xl">{product?.title}</h1>
 
           <p>{product?.description}</p>
 
