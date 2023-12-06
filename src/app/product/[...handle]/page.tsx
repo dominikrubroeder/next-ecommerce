@@ -27,7 +27,7 @@ export default async function ProductPage({
       </div>
 
       <section className="mx-auto grid max-w-screen-lg grid-cols-2">
-        {product?.images.length > 0 ? (
+        {product?.images?.length > 0 ? (
           <Image
             src={product?.images[0]}
             width={300}
