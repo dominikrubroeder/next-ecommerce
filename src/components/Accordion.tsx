@@ -1,33 +1,63 @@
 "use client";
-import { useState } from "react";
-import { MinusIcon, PlusIcon } from "@heroicons/react/24/outline";
+import { ReactNode, useState } from "react";
+import {
+  ChevronDownIcon,
+  ChevronRightIcon,
+  MinusIcon,
+  PlusIcon,
+} from "@heroicons/react/24/outline";
 
 export default function Accordion({
   title,
-  content,
+  children,
+  open,
+  background = true,
+  icons = "plus-minus",
 }: {
   title: string;
-  content: string;
+  children: ReactNode;
+  open?: boolean;
+  background?: boolean;
+  icons?: "chevron" | "plus-minus";
 }) {
-  const [open, setOpen] = useState(false);
+  const [showContent, setShowContent] = useState(open);
+
   return (
-    <div className="rounded-2xl bg-gray-100">
+    <div
+      className={`w-full min-w-[10rem] rounded-2xl ${
+        background ? "bg-gray-100" : "bg-transparent"
+      }`}
+    >
       <header
-        className="flex cursor-pointer select-none items-center justify-between gap-2 rounded-2xl p-4"
-        onClick={() => setOpen((prevState) => !prevState)}
+        className={`flex cursor-pointer select-none items-center justify-between gap-2 rounded-2xl ${
+          background ? "p-4" : "p-0 pb-4"
+        }`}
+        onClick={() => setShowContent((prevState) => !prevState)}
       >
         <h3>{title}</h3>
-        {open && <MinusIcon className="h-5 w-5" />}
-        {!open && <PlusIcon className="h-5 w-5" />}
+        {showContent && icons === "plus-minus" && (
+          <MinusIcon className="h-5 w-5" />
+        )}
+        {!showContent && icons === "plus-minus" && (
+          <PlusIcon className="h-5 w-5" />
+        )}
+        {showContent && icons === "chevron" && (
+          <ChevronRightIcon className="h-4 w-4" />
+        )}
+        {!showContent && icons === "chevron" && (
+          <ChevronDownIcon className="h-4 w-4" />
+        )}
       </header>
       <div
         className={`${
-          open
-            ? "visible h-full w-full translate-y-0 px-4 pb-3 opacity-100"
+          showContent
+            ? `visible h-full w-full translate-y-0 opacity-100 ${
+                background ? "px-4 pb-3" : "p-0"
+              }`
             : "invisible h-0 w-0 -translate-y-4 px-0 pb-0 opacity-0"
         }`}
       >
-        {content}
+        {children}
       </div>
     </div>
   );

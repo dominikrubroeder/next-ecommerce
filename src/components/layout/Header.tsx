@@ -4,7 +4,7 @@ import { Suspense } from "react";
 
 export default function Header() {
   return (
-    <header className="flex flex-wrap items-center justify-between gap-2 p-4">
+    <header className="grid gap-2 p-4 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-4">
       <nav>
         <ul className="flex flex-wrap gap-2">
           <li>

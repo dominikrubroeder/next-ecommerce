@@ -53,7 +53,7 @@ export default async function ProductPage({
 
           <ul className="mt-4 grid gap-2">
             <li>
-              <Accordion title="Description" content={product?.description} />
+              <Accordion title="Description">{product?.description}</Accordion>
             </li>
           </ul>
         </div>

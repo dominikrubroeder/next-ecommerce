@@ -28,7 +28,7 @@ export default async function CategoryPage({
 
   return (
     <div className="p-4">
-      <h1 className="inline-block border-b pb-4 text-2xl">
+      <h1 className="border-b pb-4 text-2xl sm:inline-block">
         Products for Category <InlineBadge>{params.handle}</InlineBadge>
       </h1>
 

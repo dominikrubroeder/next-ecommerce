@@ -5,6 +5,7 @@ import ProductCard from "@/components/ProductCard";
 import { QueueListIcon, TableCellsIcon } from "@heroicons/react/24/outline";
 import { filterProducts } from "@/helpers";
 import Sorting from "@/components/Sorting";
+import Filter from "@/components/Filter";
 
 export default async function ProductPage({
   searchParams,
@@ -56,9 +57,9 @@ export default async function ProductPage({
         </div>
       )}
 
-      <section className="flex gap-12">
+      <section className="flex flex-col gap-12 md:flex-row">
         <ul
-          className={`grid flex-1 gap-8 ${
+          className={`order-2 grid flex-1 gap-8 md:order-1 ${
             listView === "Row" ? "" : "sm:grid-cols-2 md:grid-cols-3"
           }`}
         >
@@ -71,25 +72,8 @@ export default async function ProductPage({
           ))}
         </ul>
 
-        <aside className="min-w-max pl-4 pr-8">
-          <h2 className="mb-4 text-lg font-semibold">Filters</h2>
-          <fieldset className="select-none">
-            <legend className="mb-2 text-sm font-semibold">Price range</legend>
-            <div className="space-y-2">
-              <label className="flex items-center gap-2 font-normal">
-                <input type="checkbox" id="price-under-50" />
-                Under 50€
-              </label>
-              <label className="flex items-center gap-2 font-normal">
-                <input type="checkbox" id="price-50-100" />
-                50€ - 100€
-              </label>
-              <label className="flex items-center gap-2 font-normal">
-                <input type="checkbox" id="price-over-100" />
-                Over 100€
-              </label>
-            </div>
-          </fieldset>
+        <aside className="order-1 min-w-max md:order-2">
+          <Filter />
         </aside>
       </section>
     </div>
