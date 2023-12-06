@@ -42,8 +42,8 @@ export const filterProducts = (
         (product) => product.price > 50 && product.price < 100,
       );
       break;
-    case "price-over-50":
-      filteredProducts = products.filter((product) => product.price > 50);
+    case "price-over-100":
+      filteredProducts = products.filter((product) => product.price > 100);
       break;
     default:
       filteredProducts = products;
