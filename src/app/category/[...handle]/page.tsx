@@ -37,7 +37,7 @@ export default async function CategoryPage({
         Back
       </Link>
 
-      <ul className="grid grid-cols-3 gap-8">
+      <ul className="grid gap-8 sm:grid-cols-2 md:grid-cols-3">
         {products.map((product) => (
           <li key={product.id}>
             <Link href={product.fullPath}>

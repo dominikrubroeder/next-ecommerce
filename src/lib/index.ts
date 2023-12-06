@@ -46,6 +46,12 @@ export async function getProducts(
 
       if (productsByCategory.length > 0) return productsByCategory;
 
+      const productsById = products.filter(
+        (product) => product.id.toString() === filterValue.toLowerCase(),
+      );
+
+      if (productsById.length > 0) return productsById;
+
       return [];
     default:
       return products;
