@@ -3,12 +3,7 @@ import Accordion from "@/components/Accordion";
 
 export default function Filter() {
   return (
-    <Accordion
-      title="Filters"
-      open={window.innerWidth > 768}
-      background={false}
-      icons="chevron"
-    >
+    <Accordion title="Filters" open={true} background={false} icons="chevron">
       <fieldset className="select-none">
         <legend className="mb-2 text-sm font-semibold">Price range</legend>
         <div className="space-y-2">
