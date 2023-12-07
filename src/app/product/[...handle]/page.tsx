@@ -31,12 +31,12 @@ export default async function ProductPage({
             src={product?.images[0]}
             width={300}
             height={300}
-            className="mx-auto object-contain"
+            className="mx-auto object-contain xl:ml-0"
             alt={product?.title + " image 01"}
             priority
           />
         ) : (
-          <div className="mx-auto flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100">
+          <div className="mx-auto flex h-80 w-80 items-center justify-center rounded-2xl bg-gray-100 xl:ml-0 xl:h-96 xl:w-96">
             <PhotoIcon className="h-20 w-20 text-gray-200" />
           </div>
         )}
