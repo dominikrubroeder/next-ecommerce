@@ -12,6 +12,10 @@ export default function ProductImageGallery({
   const router = useRouter();
   const pathname = usePathname();
   const searchParams = useSearchParams();
+
+  if (images === null || images === undefined || images.length === 0)
+    return null;
+
   const selectedImage = isNaN(Number(searchParams.getAll("image")[0]))
     ? 0
     : Number(searchParams.getAll("image")[0]);
