@@ -1,7 +1,7 @@
 import { Suspense } from "react";
 import Loading from "@/app/product/[...handle]/loading";
 import { getProduct } from "@/lib";
-import { ArrowLongLeftIcon, PhotoIcon } from "@heroicons/react/24/outline";
+import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 import Accordion from "@/components/Accordion";
 import Tabs from "@/components/Tabs";
@@ -26,16 +26,10 @@ export default async function ProductPage({
       </div>
 
       <section className="grid gap-8 p-4 md:grid-cols-2 md:gap-0">
-        {product?.images?.length > 0 ? (
-          <ProductImageGallery
-            images={product?.images}
-            productTitle={product?.title}
-          />
-        ) : (
-          <div className="mx-auto flex h-80 w-80 items-center justify-center rounded-2xl bg-gray-100 xl:h-96 xl:w-96">
-            <PhotoIcon className="h-20 w-20 text-gray-200" />
-          </div>
-        )}
+        <ProductImageGallery
+          images={product?.images}
+          productTitle={product?.title}
+        />
 
         <div>
           <div className="flex flex-wrap items-center justify-between gap-2">
