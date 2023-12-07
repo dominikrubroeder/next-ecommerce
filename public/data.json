@@ -106,7 +106,9 @@
       "fullPath": "/product/iphone",
       "category": "Tech",
       "images": [
-        "/products/iphone-15-pro-01.jpeg"
+        "/products/iphone-15-pro-01.jpeg",
+        "/products/iphone-15-pro-gallery-01.jpeg",
+        "/products/iphone-15-pro-gallery-02.jpeg"
       ],
       "galleryImages": [
         "/products/iphone-15-pro-gallery-01.jpeg",
