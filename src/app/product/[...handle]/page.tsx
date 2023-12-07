@@ -25,18 +25,18 @@ export default async function ProductPage({
         </Link>
       </div>
 
-      <section className="mx-auto grid max-w-screen-lg grid-cols-2">
+      <section className="mx-auto grid max-w-screen-lg gap-8 p-4 md:grid-cols-2 md:gap-0">
         {product?.images?.length > 0 ? (
           <Image
             src={product?.images[0]}
             width={300}
             height={300}
-            className="object-contain p-4"
+            className="mx-auto object-contain"
             alt={product?.title + " image 01"}
             priority
           />
         ) : (
-          <div className="flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100 p-4">
+          <div className="mx-auto flex h-96 w-96 items-center justify-center rounded-2xl bg-gray-100">
             <PhotoIcon className="h-20 w-20 text-gray-200" />
           </div>
         )}
