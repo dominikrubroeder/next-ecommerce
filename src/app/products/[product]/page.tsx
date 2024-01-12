@@ -20,9 +20,9 @@ export default async function ProductPage({
   return (
     <div className="grid gap-4">
       <div className="px-4">
-        <h1 className="border-b pb-5 text-2xl">Product</h1>
+        <h1 className="border-b pb-5 text-4xl">Product</h1>
 
-        <BackLink href="/categories" />
+        <BackLink href="/products" />
       </div>
 
       <div>

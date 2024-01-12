@@ -3,6 +3,7 @@ import CategoryProducts from "@/components/categories/products/CategoryProducts"
 import BackLink from "@/components/BackLink";
 import { Suspense } from "react";
 import ProductLoading from "@/components/product/ProductLoading";
+import { capitalize } from "@/lib/helpers";
 
 export const dynamic = "force-dynamic";
 
@@ -11,11 +12,11 @@ export default function CategoryPage({
 }: {
   params: { category: string };
 }) {
-  const category = params.category;
+  const category = capitalize(params.category);
 
   return (
     <div className="px-4">
-      <h1 className="border-b pb-5 text-2xl">
+      <h1 className="border-b pb-5 text-4xl">
         Products for Category <InlineBadge>{category}</InlineBadge>
       </h1>
 

@@ -1,11 +1,10 @@
 import Link from "next/link";
 import { getProducts } from "@/lib";
 import InlineBadge from "@/components/InlineBadge";
-import Product from "@/components/product/Product";
 import { QueueListIcon, TableCellsIcon } from "@heroicons/react/24/outline";
 import { filterProducts } from "@/lib/helpers";
 import Sorting from "@/components/products/Sorting";
-import Filter from "@/components/products/Filter";
+import ProductList from "@/components/product/product-list/ProductList";
 
 export const dynamic = "force-dynamic";
 
@@ -29,22 +28,22 @@ export default async function ProductsPage({
   const filteredProducts = filterProducts(products, filter, sorting);
 
   return (
-    <div className="p-4">
+    <div className="grid gap-4">
       {searchParams.search ? (
-        <>
-          <h1 className="inline-block border-b pb-4 text-2xl">
+        <section className="px-4">
+          <h1 className="border-b pb-4 text-4xl">
             Search for <InlineBadge>{searchParams.search}</InlineBadge>
           </h1>
 
-          <Link href="/product" className="my-4 flex items-center gap-2">
+          <Link href="/products" className="my-4 flex items-center gap-2">
             All products
           </Link>
-        </>
+        </section>
       ) : (
-        <div className="mb-4 flex items-center justify-between gap-4">
-          <h1 className="inline-block text-2xl">All Products</h1>
+        <section className="mx-4 flex justify-between gap-4 border-b pb-5">
+          <h1 className="text-4xl">All Products</h1>
 
-          <div className="flex gap-4">
+          <div className="flex items-center gap-4">
             <Sorting selected={sorting} />
 
             <div className="flex gap-1">
@@ -55,28 +54,14 @@ export default async function ProductsPage({
                 <TableCellsIcon className="h-4 w-4" />
               </button>
             </div>
+
+            <p>Filter here</p>
           </div>
-        </div>
+        </section>
       )}
 
-      <section className="flex flex-col gap-12 md:flex-row">
-        <ul
-          className={`order-2 grid flex-1 gap-8 md:order-1 ${
-            listView === "Row" ? "" : "sm:grid-cols-2 md:grid-cols-3"
-          }`}
-        >
-          {filteredProducts.map((product) => (
-            <li key={product.id}>
-              <Link href={product.path}>
-                <Product product={product} />
-              </Link>
-            </li>
-          ))}
-        </ul>
-
-        <aside className="order-1 min-w-max md:order-2">
-          <Filter />
-        </aside>
+      <section className="flex flex-col gap-12 px-4 md:flex-row">
+        <ProductList products={filteredProducts} listView={listView} />
       </section>
     </div>
   );

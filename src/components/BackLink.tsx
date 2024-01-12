@@ -1,7 +1,13 @@
 import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
 
-export default function BackLink({ href }: { href: string }) {
+export default function BackLink({
+  href,
+  label,
+}: {
+  href: string;
+  label?: string;
+}) {
   const url = href.replace("/", "");
 
   return (
@@ -16,7 +22,7 @@ export default function BackLink({ href }: { href: string }) {
         title="Arrow long left icon"
         aria-label="Arrow long left icon"
       />
-      Back
+      {label ?? "Back"}
     </Link>
   );
 }

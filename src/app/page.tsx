@@ -1,7 +1,7 @@
 export default function Home() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl">Hello world</h1>
-    </div>
+    <section className="px-4">
+      <h1 className="border-b pb-5 text-4xl">Home</h1>
+    </section>
   );
 }
