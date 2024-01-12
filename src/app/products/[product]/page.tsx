@@ -34,7 +34,7 @@ export default async function ProductPage({
           <Tabs
             tabs={product.tabs}
             searchParamsTab={searchParams.tab}
-            productFullPath={product.fullPath}
+            productPath={product.path}
           />
         </section>
       </div>

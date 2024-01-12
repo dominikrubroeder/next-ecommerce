@@ -6,11 +6,11 @@ import Link from "next/link";
 export default function Product({ product }: { product: Product }) {
   return (
     <Link
-      href={product.fullPath}
+      href={product.path}
       className="grid gap-4"
       title={`Go to ${product.title} page`}
     >
-      <div className="relative min-h-[13rem] overflow-hidden rounded-2xl p-4">
+      <div className="relative min-h-[13rem] overflow-hidden rounded-2xl border p-4">
         {product.images.length > 0 ? (
           <Image
             src={product.images[0]}
@@ -20,7 +20,7 @@ export default function Product({ product }: { product: Product }) {
             className="mx-auto object-contain"
           />
         ) : (
-          <div className="absolute inset-0 flex items-center justify-center border">
+          <div className="absolute inset-0 flex items-center justify-center">
             <PhotoIcon className="h-12 w-12 text-gray-300" />
           </div>
         )}

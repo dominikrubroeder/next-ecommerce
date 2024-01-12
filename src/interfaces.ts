@@ -5,7 +5,7 @@ export interface Product {
   description: string;
   variants: Product[];
   manufacturer: string;
-  fullPath: string;
+  path: string;
   category: string;
   images: string[];
   galleryImages: string[];
@@ -15,5 +15,5 @@ export interface Product {
 export interface Category {
   id: number;
   title: string;
-  fullPath: string;
+  path: string;
 }

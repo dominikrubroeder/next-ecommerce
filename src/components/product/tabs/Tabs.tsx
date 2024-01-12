@@ -3,11 +3,11 @@ import Tab from "@/components/product/tabs/Tab";
 export default function Tabs({
   tabs,
   searchParamsTab,
-  productFullPath,
+  productPath,
 }: {
   tabs: { title: string; content: string }[];
   searchParamsTab: undefined | string;
-  productFullPath: string;
+  productPath: string;
 }) {
   if (tabs === null || tabs === undefined || tabs.length === 0) return null;
 
@@ -22,7 +22,7 @@ export default function Tabs({
               tab={tab.title}
               searchParamsTab={searchParamsTab}
               index={index}
-              productFullPath={productFullPath}
+              productPath={productPath}
             />
           </li>
         ))}

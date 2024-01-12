@@ -13,7 +13,7 @@ export default function Header() {
             <Link href="/categories">Categories</Link>
           </li>
           <li>
-            <Link href="/product">Product</Link>
+            <Link href="/products">Products</Link>
           </li>
         </ul>
       </nav>

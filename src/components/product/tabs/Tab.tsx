@@ -5,16 +5,16 @@ export default function Tab({
   tab,
   searchParamsTab,
   index,
-  productFullPath,
+  productPath,
 }: {
   tab: string;
   searchParamsTab: undefined | string;
   index: number;
-  productFullPath: string;
+  productPath: string;
 }) {
   return (
     <Link
-      href={`${productFullPath}?tab=${tab}`}
+      href={`${productPath}?tab=${tab}`}
       className={`cursor-pointer rounded-2xl p-4 transition ${selectedClassName(
         index,
         tab,

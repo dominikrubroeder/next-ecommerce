@@ -4,7 +4,7 @@ import { Category } from "@/interfaces";
 export default function Category({ category }: { category: Category }) {
   return (
     <Link
-      href={category.fullPath}
+      href={category.path}
       title={`Go to category ${category.title}`}
       aria-label={`Go to category ${category.title}`}
     >

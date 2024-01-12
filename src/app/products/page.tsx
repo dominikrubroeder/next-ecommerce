@@ -67,7 +67,7 @@ export default async function ProductsPage({
         >
           {filteredProducts.map((product) => (
             <li key={product.id}>
-              <Link href={product.fullPath}>
+              <Link href={product.path}>
                 <Product product={product} />
               </Link>
             </li>
