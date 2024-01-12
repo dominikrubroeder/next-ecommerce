@@ -68,3 +68,7 @@ export function selectedClassName(
     ? "bg-gray-100"
     : "bg-transparent";
 }
+
+export function capitalize(text: string) {
+  return text.charAt(0).toUpperCase() + text.slice(1);
+}
