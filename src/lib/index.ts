@@ -1,6 +1,6 @@
 import { Category, Product } from "@/interfaces";
 import { promises as fs } from "fs";
-import { formatProductTitle } from "@/helpers";
+import { formatProductTitle } from "@/lib/helpers";
 
 export async function getData(): Promise<{
   products: Product[];

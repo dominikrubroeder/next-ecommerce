@@ -3,7 +3,7 @@ import { getProducts } from "@/lib";
 import InlineBadge from "@/components/InlineBadge";
 import ProductCard from "@/components/ProductCard";
 import { QueueListIcon, TableCellsIcon } from "@heroicons/react/24/outline";
-import { filterProducts } from "@/helpers";
+import { filterProducts } from "@/lib/helpers";
 import Sorting from "@/components/Sorting";
 import Filter from "@/components/Filter";
 

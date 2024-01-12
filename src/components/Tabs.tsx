@@ -1,6 +1,6 @@
 "use client";
 
-import { getTabContent } from "@/helpers";
+import { getTabContent } from "@/lib/helpers";
 import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function Tabs({
