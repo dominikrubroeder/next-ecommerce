@@ -1,6 +1,5 @@
 import Link from "next/link";
 import Search from "@/components/Search";
-import { Suspense } from "react";
 
 export default function Header() {
   return (
@@ -16,21 +15,16 @@ export default function Header() {
           <li>
             <Link href="/product">Product</Link>
           </li>
-          <li>
-            <Link href="/account">Account</Link>
-          </li>
-          <li>
-            <Link href="/cart">Cart</Link>
-          </li>
-          <li>
-            <Link href="/checkout">Checkout</Link>
-          </li>
         </ul>
       </nav>
 
-      <Suspense fallback={<div>Loading search...</div>}>
-        <Search placeholder="Products ..." />
-      </Suspense>
+      <div className="flex items-center gap-4">
+        <Search placeholder="Products..." />
+
+        <Link href="/account">Account</Link>
+
+        <Link href="/cart">Cart</Link>
+      </div>
     </header>
   );
 }
