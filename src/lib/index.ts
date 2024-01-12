@@ -1,6 +1,7 @@
+"use server";
+
 import { Category, Product } from "@/interfaces";
 import { promises as fs } from "fs";
-import { formatProductTitle } from "@/lib/helpers";
 
 export async function getData(): Promise<{
   products: Product[];
@@ -56,16 +57,6 @@ export async function getProducts(
     default:
       return products;
   }
-}
-
-export async function getProduct(handle: string): Promise<Product | undefined> {
-  const { products } = await getData();
-
-  return products.find(
-    (product) =>
-      product.id.toString() === handle ||
-      formatProductTitle(product.title) === formatProductTitle(handle),
-  );
 }
 
 export async function getCategories(): Promise<Category[]> {

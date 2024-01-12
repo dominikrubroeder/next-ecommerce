@@ -26,7 +26,7 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/1",
+      "fullPath": "/products/1",
       "category": "Snowboarding",
       "images": [],
       "galleryImages": [],
@@ -58,7 +58,7 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/2",
+      "fullPath": "/products/2",
       "category": "Snowboarding",
       "images": [],
       "galleryImages": [],
@@ -90,7 +90,7 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/3",
+      "fullPath": "/products/3",
       "category": "Ski",
       "images": [],
       "galleryImages": [],
@@ -103,7 +103,7 @@
       "description": "This is the iPhone description. More variants available",
       "variants": [],
       "manufacturer": "Apple",
-      "fullPath": "/product/iphone",
+      "fullPath": "/products/iphone",
       "category": "Tech",
       "images": [
         "/products/iphone-15-pro-01.jpeg",
@@ -157,7 +157,7 @@
         }
       ],
       "manufacturer": "Manufacturer Inc.",
-      "fullPath": "/product/5",
+      "fullPath": "/products/5",
       "category": "Snowboarding",
       "images": [],
       "galleryImages": [

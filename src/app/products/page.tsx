@@ -1,13 +1,15 @@
 import Link from "next/link";
 import { getProducts } from "@/lib";
 import InlineBadge from "@/components/InlineBadge";
-import ProductCard from "@/components/ProductCard";
+import Product from "@/components/product/Product";
 import { QueueListIcon, TableCellsIcon } from "@heroicons/react/24/outline";
 import { filterProducts } from "@/lib/helpers";
-import Sorting from "@/components/Sorting";
-import Filter from "@/components/Filter";
+import Sorting from "@/components/products/Sorting";
+import Filter from "@/components/products/Filter";
 
-export default async function ProductPage({
+export const dynamic = "force-dynamic";
+
+export default async function ProductsPage({
   searchParams,
 }: {
   searchParams: {
@@ -66,7 +68,7 @@ export default async function ProductPage({
           {filteredProducts.map((product) => (
             <li key={product.id}>
               <Link href={product.fullPath}>
-                <ProductCard product={product} />
+                <Product product={product} />
               </Link>
             </li>
           ))}
