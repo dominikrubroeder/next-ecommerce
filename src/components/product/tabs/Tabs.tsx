@@ -11,7 +11,9 @@ export default function Tabs({
 }) {
   if (tabs === null || tabs === undefined || tabs.length === 0) return null;
 
-  const tabContent = tabs.find((tab) => tab.title === searchParamsTab)?.content;
+  const tabContent =
+    tabs.find((tab) => tab.title === searchParamsTab)?.content ??
+    tabs[0].content;
 
   return (
     <div className="grid gap-8">
