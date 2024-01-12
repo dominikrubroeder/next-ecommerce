@@ -1,12 +1,15 @@
 import { Product } from "@/interfaces";
 import Image from "next/image";
 import { PhotoIcon } from "@heroicons/react/24/outline";
+import Link from "next/link";
 
-export default function ProductCard({ product }: { product: Product }) {
-  if (product === undefined) return null;
-
+export default function Product({ product }: { product: Product }) {
   return (
-    <div className="grid gap-4">
+    <Link
+      href={product.fullPath}
+      className="grid gap-4"
+      title={`Go to ${product.title} page`}
+    >
       <div className="relative min-h-[13rem] overflow-hidden rounded-2xl border p-4">
         {product.images.length > 0 ? (
           <Image
@@ -26,6 +29,6 @@ export default function ProductCard({ product }: { product: Product }) {
         <h2 className="font-bold">{product.title}</h2>
         <p>{product.price} €</p>
       </div>
-    </div>
+    </Link>
   );
 }

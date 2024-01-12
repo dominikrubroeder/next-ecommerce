@@ -170,22 +170,22 @@
     {
       "id": 1,
       "title": "Snowboarding",
-      "fullPath": "/category/snowboarding"
+      "fullPath": "/categories/snowboarding"
     },
     {
       "id": 2,
       "title": "Ski",
-      "fullPath": "/category/ski"
+      "fullPath": "/categories/ski"
     },
     {
       "id": 3,
       "title": "Tech",
-      "fullPath": "/category/tech"
+      "fullPath": "/categories/tech"
     },
     {
       "id": 4,
       "title": "Accessories",
-      "fullPath": "/category/accessories"
+      "fullPath": "/categories/accessories"
     }
   ]
 }

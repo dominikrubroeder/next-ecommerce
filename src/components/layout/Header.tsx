@@ -1,5 +1,5 @@
 import Link from "next/link";
-import Search from "@/components/Search";
+import Search from "@/components/search/Search";
 
 export default function Header() {
   return (
@@ -10,7 +10,7 @@ export default function Header() {
             <Link href="/">Home</Link>
           </li>
           <li>
-            <Link href="/category">Category</Link>
+            <Link href="/categories">Categories</Link>
           </li>
           <li>
             <Link href="/product">Product</Link>
