@@ -1,8 +1,13 @@
 import { Suspense } from "react";
 import CategoriesLoading from "@/components/categories/CategoriesLoading";
 import Categories from "@/components/categories/Categories";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Categories | Next ecommerce",
+};
 
 export default function CategoryPage() {
   return (
