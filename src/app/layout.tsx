@@ -9,7 +9,7 @@ import { SpeedInsights } from "@vercel/speed-insights/next";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Next ecomm",
+  title: "Next ecommerce | Base foundation of common ecommerce experience",
   description: "Next App with base foundations of common ecommerce pages",
 };
 
