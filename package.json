@@ -6,16 +6,21 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "proxy": "local-ssl-proxy --source 3010 --target 3000 --cert localhost.pem --key localhost-key.pem",
+    "pull-storyblok-components": "storyblok pull-components --space=271005",
+    "generate-storyblok-types": "storyblok-generate-ts source=./components.271005.json target=./component-types-sb"
   },
   "dependencies": {
     "@heroicons/react": "^2.0.18",
+    "@storyblok/react": "^3.0.6",
     "@vercel/analytics": "^1.1.1",
     "@vercel/speed-insights": "^1.0.0",
     "next": "^14.0.4",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "sharp": "^0.32.6",
+    "storyblok-generate-ts": "^2.0.1",
     "use-debounce": "^10.0.0"
   },
   "devDependencies": {

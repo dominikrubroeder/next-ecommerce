@@ -5,6 +5,23 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { StoryblokBridgeLoader } from "@storyblok/react/rsc";
+import { apiPlugin, storyblokInit } from "@storyblok/react";
+import Teaser from "@/components/storyblok/Teaser";
+import Page from "@/components/storyblok/Page";
+import Feature from "@/components/storyblok/Feature";
+import Grid from "@/components/storyblok/Grid";
+
+storyblokInit({
+  accessToken: "TRy8fro6F6vWWbhtsbcTaAtt",
+  use: [apiPlugin],
+  components: {
+    teaser: Teaser,
+    page: Page,
+    feature: Feature,
+    grid: Grid,
+  },
+});
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -27,6 +44,7 @@ export default function RootLayout({
         <Analytics />
         <SpeedInsights />
       </body>
+      <StoryblokBridgeLoader options={{}} />
     </html>
   );
 }
