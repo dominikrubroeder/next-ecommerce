@@ -3,8 +3,13 @@ import BackLink from "@/components/BackLink";
 import ProductHero from "@/components/product/hero/ProductHero";
 import { getProduct } from "@/lib/product";
 import Tabs from "@/components/product/tabs/Tabs";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "Product | Next ecommerce",
+};
 
 export default async function ProductPage({
   params,

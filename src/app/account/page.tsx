@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Your Account | Next ecommerce",
+};
 export default function AccountPage() {
   return (
     <div className="px-4">

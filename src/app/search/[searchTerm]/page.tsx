@@ -3,6 +3,11 @@ import BackLink from "@/components/BackLink";
 import { Suspense } from "react";
 import Products from "@/components/products/Products";
 import ProductLoading from "@/components/product/ProductLoading";
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Search | Next ecommerce",
+};
 
 export default function SearchTermPage({
   params,

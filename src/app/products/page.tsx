@@ -7,8 +7,13 @@ import Sorting from "@/components/products/actions/Sorting";
 import Products from "@/components/products/Products";
 import { Suspense } from "react";
 import ProductLoading from "@/components/product/ProductLoading";
+import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";
+
+export const metadata: Metadata = {
+  title: "All Products | Next ecommerce",
+};
 
 export default function ProductsPage({
   searchParams,
@@ -25,7 +30,7 @@ export default function ProductsPage({
 
   return (
     <div className="grid gap-4">
-      <section className="mx-4 flex justify-between gap-4 border-b pb-5">
+      <section className="mx-4 flex justify-between gap-4 border-b pb-3.5">
         <h1 className="text-4xl">All Products</h1>
 
         <div className="flex items-center gap-4">

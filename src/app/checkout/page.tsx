@@ -1,3 +1,8 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Checkout | Next ecommerce",
+};
 export default function CheckoutPage() {
   return (
     <div className="px-4">

@@ -1,3 +1,9 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  title: "Search | Next ecommerce",
+};
+
 export default function SearchPage() {
   return (
     <section className="grid gap-4 px-4">
