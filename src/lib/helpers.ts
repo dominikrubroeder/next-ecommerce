@@ -72,3 +72,15 @@ export function selectedClassName(
 export function capitalize(text: string) {
   return text.charAt(0).toUpperCase() + text.slice(1);
 }
+
+export const formatSearchTerm = (
+  searchTerm: string | undefined,
+  as: "url" | "output",
+) => {
+  if (searchTerm === undefined) return null;
+
+  if (as === "url")
+    return searchTerm.trim().replaceAll(" ", "-").replaceAll("%20%", "-");
+
+  return searchTerm.replaceAll("%20%", " ").replaceAll("-", " ");
+};

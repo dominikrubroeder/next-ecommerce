@@ -19,16 +19,16 @@ export async function getData(): Promise<{
 }
 
 export async function getProducts(
-  filter?: "category" | "search",
+  forPageType?: "category" | "search",
   filterValue?: string,
 ): Promise<Product[]> {
   const { products } = await getData();
 
-  if (filter === undefined || filterValue === undefined) {
+  if (forPageType === undefined || filterValue === undefined) {
     return products;
   }
 
-  switch (filter) {
+  switch (forPageType) {
     case "category":
       return products.filter(
         (product) =>

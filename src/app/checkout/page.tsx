@@ -1,7 +1,7 @@
 export default function CheckoutPage() {
   return (
-    <div className="p-4">
-      <h1 className="text-2xl">Hello, world – Checkout</h1>
+    <div className="px-4">
+      <h1 className="border-b pb-5 text-4xl">Checkout</h1>
     </div>
   );
 }

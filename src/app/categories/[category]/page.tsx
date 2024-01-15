@@ -1,9 +1,9 @@
 import InlineBadge from "@/components/InlineBadge";
-import CategoryProducts from "@/components/categories/products/CategoryProducts";
 import BackLink from "@/components/BackLink";
 import { Suspense } from "react";
 import ProductLoading from "@/components/product/ProductLoading";
 import { capitalize } from "@/lib/helpers";
+import Products from "@/components/products/Products";
 
 export const dynamic = "force-dynamic";
 
@@ -23,7 +23,7 @@ export default function CategoryPage({
       <BackLink href="/categories" />
 
       <Suspense fallback={<ProductLoading />}>
-        <CategoryProducts category={category} />
+        <Products category={category} />
       </Suspense>
     </div>
   );
