@@ -6,8 +6,6 @@ import { capitalize } from "@/lib/helpers";
 import Products from "@/components/products/Products";
 import type { Metadata } from "next";
 
-export const dynamic = "force-dynamic";
-
 export const metadata: Metadata = {
   title: "Products on Category | Next ecommerce",
 };
