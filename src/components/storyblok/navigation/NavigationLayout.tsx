@@ -1,18 +1,18 @@
-import LayoutConfig from "@/components/storyblok/LayoutConfig";
+import NavigationConfig from "@/components/storyblok/navigation/NavigationConfig";
 import { ReactNode } from "react";
 import { LayoutConfigStoryblok } from "../../../../component-types-sb";
 
-const NavigationLayout = ({
+export default function NavigationLayout({
   children,
   story,
 }: {
   children: ReactNode;
   story: LayoutConfigStoryblok;
-}) => (
-  <div>
-    <LayoutConfig blok={story.content} />
-    {children}
-  </div>
-);
-
-export default NavigationLayout;
+}) {
+  return (
+    <div>
+      <NavigationConfig blok={story.content} />
+      {children}
+    </div>
+  );
+}

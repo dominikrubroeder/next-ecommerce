@@ -3,7 +3,7 @@ import {
   SbBlokData,
   StoryblokComponent,
   storyblokEditable,
-} from "@storyblok/react";
+} from "@storyblok/react/rsc";
 import { PageStoryblok } from "../../../component-types-sb";
 
 const Page = ({ blok }: { blok: PageStoryblok }) => (

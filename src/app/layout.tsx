@@ -5,31 +5,10 @@ import "./globals.css";
 import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
+import { storyblokInitializer } from "@/lib/storyblok/imports";
 import { StoryblokBridgeLoader } from "@storyblok/react/rsc";
-import { apiPlugin, storyblokInit } from "@storyblok/react";
-import Teaser from "@/components/storyblok/Teaser";
-import Page from "@/components/storyblok/Page";
-import Feature from "@/components/storyblok/Feature";
-import Grid from "@/components/storyblok/Grid";
-import Navigation from "@/components/storyblok/navigation/Navigation";
-import NavigationLink from "@/components/storyblok/navigation/NavigationLink";
-import NavigationLayout from "@/components/storyblok/navigation/NavigationLayout";
-import LayoutConfig from "@/components/storyblok/LayoutConfig";
 
-storyblokInit({
-  accessToken: "TRy8fro6F6vWWbhtsbcTaAtt",
-  use: [apiPlugin],
-  components: {
-    teaser: Teaser,
-    page: Page,
-    feature: Feature,
-    grid: Grid,
-    layout_config: LayoutConfig,
-    layout: NavigationLayout,
-    navigation: Navigation,
-    navigation_link: NavigationLink,
-  },
-});
+storyblokInitializer();
 
 const inter = Inter({ subsets: ["latin"] });
 

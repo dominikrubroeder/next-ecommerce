@@ -1,5 +1,5 @@
 import React from "react";
-import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
+import { StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
 import { GridStoryblok } from "../../../component-types-sb";
 
 const Grid = ({ blok }: { blok: GridStoryblok }) => (

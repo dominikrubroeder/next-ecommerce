@@ -1,4 +1,4 @@
-import { storyblokEditable } from "@storyblok/react";
+import { storyblokEditable } from "@storyblok/react/rsc";
 import { TeaserStoryblok } from "../../../component-types-sb";
 
 const Teaser = ({ blok }: { blok: TeaserStoryblok }) => {
