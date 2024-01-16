@@ -1,4 +1,4 @@
-import LayoutConfig from "@/components/storyblok/navigation/LayoutConfig";
+import LayoutConfig from "@/components/storyblok/LayoutConfig";
 import { ReactNode } from "react";
 import { LayoutConfigStoryblok } from "../../../../component-types-sb";
 

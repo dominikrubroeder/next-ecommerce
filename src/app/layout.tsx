@@ -14,7 +14,7 @@ import Grid from "@/components/storyblok/Grid";
 import Navigation from "@/components/storyblok/navigation/Navigation";
 import NavigationLink from "@/components/storyblok/navigation/NavigationLink";
 import NavigationLayout from "@/components/storyblok/navigation/NavigationLayout";
-import LayoutConfig from "@/components/storyblok/navigation/LayoutConfig";
+import LayoutConfig from "@/components/storyblok/LayoutConfig";
 
 storyblokInit({
   accessToken: "TRy8fro6F6vWWbhtsbcTaAtt",

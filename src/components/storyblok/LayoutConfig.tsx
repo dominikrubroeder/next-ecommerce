@@ -1,5 +1,5 @@
 import { StoryblokComponent, storyblokEditable } from "@storyblok/react";
-import { LayoutConfigStoryblok } from "../../../../component-types-sb";
+import { LayoutConfigStoryblok } from "../../../component-types-sb";
 
 const NavigationConfig = ({ blok }: { blok: LayoutConfigStoryblok }) => {
   return (
