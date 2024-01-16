@@ -11,7 +11,7 @@ export interface GridStoryblok {
   columns?: (
     | FeatureStoryblok
     | GridStoryblok
-    | LayoutConfigStoryblok
+    | NavigationConfigStoryblok
     | NavigationLinkStoryblok
     | PageStoryblok
     | TeaserStoryblok
@@ -21,10 +21,10 @@ export interface GridStoryblok {
   [k: string]: any;
 }
 
-export interface LayoutConfigStoryblok {
+export interface NavigationConfigStoryblok {
   navigation?: NavigationLinkStoryblok[];
   _uid: string;
-  component: "layout_config";
+  component: "navigation_config";
   [k: string]: any;
 }
 
@@ -90,7 +90,7 @@ export interface PageStoryblok {
   body?: (
     | FeatureStoryblok
     | GridStoryblok
-    | LayoutConfigStoryblok
+    | NavigationConfigStoryblok
     | NavigationLinkStoryblok
     | PageStoryblok
     | TeaserStoryblok

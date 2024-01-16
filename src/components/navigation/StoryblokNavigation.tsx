@@ -7,7 +7,7 @@ export default async function StoryblokNavigation() {
   unstable_noStore();
 
   const { data: config } = await fetchStoryblokStory({
-    name: "/layout-config",
+    name: "/navigation-layout",
   });
 
   return <StoryblokComponent blok={config.story.content} />;

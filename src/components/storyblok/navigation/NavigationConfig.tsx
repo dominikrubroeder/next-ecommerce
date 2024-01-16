@@ -1,10 +1,10 @@
 import { StoryblokComponent, storyblokEditable } from "@storyblok/react/rsc";
-import { LayoutConfigStoryblok } from "../../../../component-types-sb";
+import { NavigationConfigStoryblok } from "../../../../component-types-sb";
 
 export default function NavigationConfig({
   blok,
 }: {
-  blok: LayoutConfigStoryblok;
+  blok: NavigationConfigStoryblok;
 }) {
   return (
     <ul className="flex gap-2" {...storyblokEditable(blok)}>
