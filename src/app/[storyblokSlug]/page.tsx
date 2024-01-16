@@ -13,9 +13,14 @@ export default async function StoryblokPage({
   });
 
   return (
-    <section className="grid gap-4 px-4">
-      <h1 className="mb-5 border-b py-5 text-4xl">Dynamic Storyblok Pages</h1>
-      <StoryblokComponent blok={data.story.content} />
-    </section>
+    <div className="space-y-4">
+      <div className="px-4">
+        <h1 className="border-b pb-5 text-4xl">Dynamic Storyblok Pages</h1>
+      </div>
+
+      <section className="px-4">
+        <StoryblokComponent blok={data.story.content} />
+      </section>
+    </div>
   );
 }
