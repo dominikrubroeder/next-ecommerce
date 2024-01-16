@@ -2,6 +2,7 @@ import Link from "next/link";
 import Search from "@/components/search/Search";
 import { Suspense } from "react";
 import StoryblokNavigation from "@/components/navigation/StoryblokNavigation";
+import StoryblokNavigationLoading from "@/components/navigation/StoryblokNavigationLoading";
 
 export default function Header() {
   return (
@@ -18,7 +19,7 @@ export default function Header() {
             <Link href="/products">Products</Link>
           </li>
 
-          <Suspense fallback="Loading...">
+          <Suspense fallback={<StoryblokNavigationLoading />}>
             <StoryblokNavigation />
           </Suspense>
         </ul>
