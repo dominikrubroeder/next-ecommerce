@@ -16,6 +16,7 @@ export async function fetchStoryblokStory({
     });
   } catch (error) {
     console.error(`fetchStoryblokStory error for slug ${name}`, error);
-    redirect("/");
   }
+
+  redirect("/");
 }
