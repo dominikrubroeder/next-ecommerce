@@ -30,7 +30,29 @@
       "category": "Snowboarding",
       "images": [],
       "galleryImages": [],
-      "tabs": []
+      "tabs": [],
+      "faqs": [
+        {
+          "question": "What is the warranty for this product?",
+          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
+        },
+        {
+          "question": "How can I track my order?",
+          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
+        },
+        {
+          "question": "Can I return the product if I am not satisfied?",
+          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
+        },
+        {
+          "question": "Is this product available for international shipping?",
+          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
+        },
+        {
+          "question": "How do I contact customer support?",
+          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
+        }
+      ]
     },
     {
       "id": 2,
@@ -62,7 +84,29 @@
       "category": "Snowboarding",
       "images": [],
       "galleryImages": [],
-      "tabs": []
+      "tabs": [],
+      "faqs": [
+        {
+          "question": "What is the warranty for this product?",
+          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
+        },
+        {
+          "question": "How can I track my order?",
+          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
+        },
+        {
+          "question": "Can I return the product if I am not satisfied?",
+          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
+        },
+        {
+          "question": "Is this product available for international shipping?",
+          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
+        },
+        {
+          "question": "How do I contact customer support?",
+          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
+        }
+      ]
     },
     {
       "id": 3,
@@ -94,7 +138,29 @@
       "category": "Ski",
       "images": [],
       "galleryImages": [],
-      "tabs": []
+      "tabs": [],
+      "faqs": [
+        {
+          "question": "What is the warranty for this product?",
+          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
+        },
+        {
+          "question": "How can I track my order?",
+          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
+        },
+        {
+          "question": "Can I return the product if I am not satisfied?",
+          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
+        },
+        {
+          "question": "Is this product available for international shipping?",
+          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
+        },
+        {
+          "question": "How do I contact customer support?",
+          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
+        }
+      ]
     },
     {
       "id": 4,
@@ -135,6 +201,28 @@
           "title": "Environment notes",
           "content": "Tab 5 content"
         }
+      ],
+      "faqs": [
+        {
+          "question": "What is the warranty for this product?",
+          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
+        },
+        {
+          "question": "How can I track my order?",
+          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
+        },
+        {
+          "question": "Can I return the product if I am not satisfied?",
+          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
+        },
+        {
+          "question": "Is this product available for international shipping?",
+          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
+        },
+        {
+          "question": "How do I contact customer support?",
+          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
+        }
       ]
     },
     {
@@ -163,7 +251,29 @@
       "galleryImages": [
         "/products/iphone-15-pro-gallery-02.jpeg"
       ],
-      "tabs": []
+      "tabs": [],
+      "faqs": [
+        {
+          "question": "What is the warranty for this product?",
+          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
+        },
+        {
+          "question": "How can I track my order?",
+          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
+        },
+        {
+          "question": "Can I return the product if I am not satisfied?",
+          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
+        },
+        {
+          "question": "Is this product available for international shipping?",
+          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
+        },
+        {
+          "question": "How do I contact customer support?",
+          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
+        }
+      ]
     }
   ],
   "categories": [
@@ -186,6 +296,57 @@
       "id": 4,
       "title": "Accessories",
       "path": "/categories/accessories"
+    }
+  ],
+  "faqs": [
+    {
+      "question": "What is the warranty for this product?",
+      "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details.",
+      "products": [
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "question": "How can I track my order?",
+      "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment.",
+      "products": [
+        "1",
+        "2",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "question": "Can I return the product if I am not satisfied?",
+      "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees.",
+      "products": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5"
+      ]
+    },
+    {
+      "question": "Is this product available for international shipping?",
+      "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details.",
+      "products": [
+        "1",
+        "2",
+        "3"
+      ]
+    },
+    {
+      "question": "How do I contact customer support?",
+      "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm.",
+      "products": [
+        "1",
+        "4",
+        "5"
+      ]
     }
   ]
 }
