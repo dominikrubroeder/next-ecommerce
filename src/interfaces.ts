@@ -10,10 +10,17 @@ export interface Product {
   images: string[];
   galleryImages: string[];
   tabs: { title: string; content: string }[];
+  faqs: FAQ[];
 }
 
 export interface Category {
   id: number;
   title: string;
   path: string;
+}
+
+export interface FAQ {
+  question: string;
+  answer: string;
+  products: string[];
 }

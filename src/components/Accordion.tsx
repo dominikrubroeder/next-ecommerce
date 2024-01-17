@@ -1,4 +1,5 @@
 "use client";
+
 import { ReactNode, useState } from "react";
 import {
   ChevronDownIcon,
@@ -42,10 +43,10 @@ export default function Accordion({
           <PlusIcon className="h-5 w-5" />
         )}
         {showContent && icons === "chevron" && (
-          <ChevronRightIcon className="h-4 w-4" />
+          <ChevronDownIcon className="h-4 w-4" />
         )}
         {!showContent && icons === "chevron" && (
-          <ChevronDownIcon className="h-4 w-4" />
+          <ChevronRightIcon className="h-4 w-4" />
         )}
       </header>
       <div

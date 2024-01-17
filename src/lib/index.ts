@@ -1,11 +1,12 @@
 "use server";
 
-import { Category, Product } from "@/interfaces";
+import { Category, FAQ, Product } from "@/interfaces";
 import { promises as fs } from "fs";
 
 export async function getData(): Promise<{
   products: Product[];
   categories: Category[];
+  faqs: FAQ[];
 }> {
   if (process.env.NODE_ENV === "development") {
     const res = await fs.readFile(process.cwd() + "/public/data.json", "utf8");
@@ -62,4 +63,13 @@ export async function getProducts(
 export async function getCategories(): Promise<Category[]> {
   const { categories } = await getData();
   return categories;
+}
+
+export async function getFAQs(forProduct: string) {
+  const { faqs } = await getData();
+
+  if (forProduct)
+    return faqs.filter((faq) => faq.products.includes(forProduct));
+
+  return faqs;
 }

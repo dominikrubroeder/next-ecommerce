@@ -1,6 +1,8 @@
 import ProductImageGallery from "@/components/product/image-gallery/ProductImageGallery";
-import Accordion from "@/components/Accordion";
 import { Product } from "@/interfaces";
+import ProductFAQs from "@/components/product/faqs/ProductFAQs";
+import { Suspense } from "react";
+import ProductFAQLoading from "@/components/product/faqs/ProductFAQLoading";
 
 export default function ProductHero({ product }: { product: Product }) {
   return (
@@ -13,18 +15,20 @@ export default function ProductHero({ product }: { product: Product }) {
       <div>
         <div className="flex flex-wrap items-center justify-between gap-2">
           <h2>{product.manufacturer}</h2>
-          <small className="ml-2 text-gray-400">{product.id}</small>
+          <small className="ml-2 text-gray-400">#{product.id}</small>
         </div>
 
         <h1 className="text-2xl">{product.title}</h1>
 
         <p>{product.description}</p>
 
-        <ul className="mt-4 grid gap-2">
-          <li>
-            <Accordion title="Description">{product.description}</Accordion>
-          </li>
-        </ul>
+        <section className="mt-5 space-y-6">
+          <h2 className="border-b pb-5 font-bold">FAQs</h2>
+
+          <Suspense fallback={<ProductFAQLoading />}>
+            <ProductFAQs productId={product.id.toString()} />
+          </Suspense>
+        </section>
       </div>
     </div>
   );

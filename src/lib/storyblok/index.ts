@@ -1,5 +1,3 @@
-"use server";
-
 import { getStoryblokApi } from "@storyblok/react";
 import { redirect } from "next/navigation";
 
