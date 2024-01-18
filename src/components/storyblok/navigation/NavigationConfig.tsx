@@ -7,9 +7,9 @@ export default function NavigationConfig({
   blok: NavigationConfigStoryblok;
 }) {
   return (
-    <ul className="flex gap-2" {...storyblokEditable(blok)}>
+    <ul className="space-x-2" {...storyblokEditable(blok)}>
       {blok.navigation?.map((nestedBlok) => (
-        <li key={nestedBlok._uid}>
+        <li key={nestedBlok._uid} className="inline-block">
           <StoryblokComponent className="" blok={nestedBlok} />
         </li>
       ))}
