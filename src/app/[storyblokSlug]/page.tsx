@@ -1,6 +1,5 @@
 import { fetchStoryblokStory } from "@/lib/storyblok";
 import { StoryblokComponent } from "@storyblok/react";
-import React from "react";
 
 export const dynamic = "force-dynamic";
 export default async function StoryblokPage({
