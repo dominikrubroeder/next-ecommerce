@@ -1,6 +1,6 @@
-import Tab from "@/components/product/tabs/Tab";
+import ProductTab from "@/components/product/tabs/ProductTab";
 
-export default function Tabs({
+export default function ProductTabs({
   tabs,
   searchParamsTab,
   productPath,
@@ -17,10 +17,10 @@ export default function Tabs({
 
   return (
     <div className="grid gap-8">
-      <ul className="flex flex-wrap">
+      <ul className="no-scrollbar overflow-x-auto whitespace-nowrap border-r md:border-none">
         {tabs.map((tab, index) => (
-          <li key={index}>
-            <Tab
+          <li key={index} className="my-4 inline-block last-of-type:mr-4">
+            <ProductTab
               tab={tab.title}
               searchParamsTab={searchParamsTab}
               index={index}

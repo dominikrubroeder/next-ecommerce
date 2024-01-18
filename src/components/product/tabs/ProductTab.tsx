@@ -1,7 +1,7 @@
 import { selectedClassName } from "@/lib/helpers";
 import Link from "next/link";
 
-export default function Tab({
+export default function ProductTab({
   tab,
   searchParamsTab,
   index,
