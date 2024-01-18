@@ -32,7 +32,7 @@ export default function Filter() {
   };
 
   return (
-    <Accordion title="Filters" open={true} background={false} icons="chevron">
+    <Accordion title="Filters" initiallyOpen={true} icons="chevron">
       <fieldset className="select-none">
         <legend className="mb-2 text-sm font-semibold">Price range</legend>
         <div className="space-y-2">
