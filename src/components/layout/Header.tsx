@@ -7,7 +7,7 @@ import Logo from "@/components/Logo";
 
 export default function Header() {
   return (
-    <header className="mb-5 xl:flex xl:items-center xl:justify-between">
+    <header className="mb-5 xl:mb-0 xl:flex xl:items-center xl:justify-between">
       <div className="grid gap-2 p-4 sm:flex sm:flex-wrap sm:items-center sm:justify-between sm:gap-4">
         <Logo />
 
