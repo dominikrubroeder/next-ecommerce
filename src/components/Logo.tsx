@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Logo() {
   return (
-    <Link href="/" className="flex items-center gap-1">
+    <Link href="/" className="group relative flex items-center gap-1">
       <svg
         width="32"
         height="32"
@@ -57,6 +57,10 @@ export default function Logo() {
       </svg>
 
       <span className="font-bold">ext commerce</span>
+
+      <div className="invisible absolute left-0 right-0 top-[2.75rem] w-max -translate-y-4 rounded-2xl border bg-gray-100 px-4 py-3 transition group-hover:visible group-hover:translate-y-0">
+        Fun Project! Nothing official.
+      </div>
     </Link>
   );
 }
