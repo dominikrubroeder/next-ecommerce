@@ -1,8 +1,8 @@
 import ProductImageGallery from "@/components/product/image-gallery/ProductImageGallery";
 import { Product } from "@/interfaces";
-import ProductFAQs from "@/components/product/faqs/ProductFAQs";
 import { Suspense } from "react";
-import ProductFAQLoading from "@/components/product/faqs/ProductFAQLoading";
+import ProductFAQs from "@/components/product/faqs/ProductFAQs";
+import ProductFAQsLoading from "@/components/product/faqs/ProductFAQsLoading";
 
 export default function ProductHero({ product }: { product: Product }) {
   return (
@@ -25,7 +25,7 @@ export default function ProductHero({ product }: { product: Product }) {
         <section className="mt-5 space-y-6">
           <h2 className="border-b pb-5 font-bold">FAQs</h2>
 
-          <Suspense fallback={<ProductFAQLoading />}>
+          <Suspense fallback={<ProductFAQsLoading />}>
             <ProductFAQs productId={product.id.toString()} />
           </Suspense>
         </section>

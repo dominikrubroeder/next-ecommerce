@@ -2,7 +2,7 @@ import { redirect } from "next/navigation";
 import BackLink from "@/components/BackLink";
 import ProductHero from "@/components/product/hero/ProductHero";
 import { getProduct } from "@/lib/product";
-import Tabs from "@/components/product/tabs/Tabs";
+import ProductTabs from "@/components/product/tabs/ProductTabs";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
@@ -34,7 +34,7 @@ export default async function ProductPage({
         </section>
 
         <section className="p-4">
-          <Tabs
+          <ProductTabs
             tabs={product.tabs}
             searchParamsTab={searchParams.tab}
             productPath={product.path}
