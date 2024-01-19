@@ -17,7 +17,7 @@ export default function ProductTabs({
 
   return (
     <div className="grid gap-8">
-      <ul className="no-scrollbar overflow-x-auto whitespace-nowrap border-r md:border-none">
+      <ul className="no-scrollbar overflow-x-auto whitespace-nowrap border-r xl:border-none">
         {tabs.map((tab, index) => (
           <li key={index} className="my-4 inline-block last-of-type:mr-4">
             <ProductTab
