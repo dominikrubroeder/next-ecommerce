@@ -4,6 +4,7 @@ import { Suspense } from "react";
 import StoryblokNavigation from "@/components/navigation/storyblok-navigation/StoryblokNavigation";
 import StoryblokNavigationLoading from "@/components/navigation/storyblok-navigation/StoryblokNavigationLoading";
 import Logo from "@/components/Logo";
+import AuthLink from "@/components/auth/AuthLink";
 
 export default function Header() {
   return (
@@ -14,11 +15,23 @@ export default function Header() {
         <nav>
           <ul className="flex items-center gap-2">
             <li className="inline-block">
-              <Link href="/categories">Categories</Link>
+              <Link
+                href="/categories"
+                title="Go to all Categories"
+                aria-label="Go to all Categories"
+              >
+                Categories
+              </Link>
             </li>
 
             <li className="inline-block">
-              <Link href="/products">Products</Link>
+              <Link
+                href="/products"
+                title="Go to all Products"
+                aria-label="Go to all Products"
+              >
+                Products
+              </Link>
             </li>
 
             <li>
@@ -34,8 +47,15 @@ export default function Header() {
         <Search placeholder="Search anything..." />
 
         <div className="space-x-4">
-          <Link href="/account">Account</Link>
-          <Link href="/cart">Cart</Link>
+          <AuthLink />
+
+          <Link
+            href="/cart"
+            title="Go to your Cart"
+            aria-label="Go to your Cart"
+          >
+            Cart
+          </Link>
         </div>
       </div>
     </header>

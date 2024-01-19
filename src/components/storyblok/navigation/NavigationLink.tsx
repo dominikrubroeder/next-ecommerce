@@ -8,7 +8,12 @@ export default function NavigationLink({
   blok: NavigationLinkStoryblok;
 }) {
   return (
-    <Link href={blok.link?.cached_url ?? "/"} {...storyblokEditable(blok)}>
+    <Link
+      href={blok.link?.cached_url ?? "/"}
+      title={`Go to ${blok.title} page`}
+      aria-label={`Go to ${blok.title} page`}
+      {...storyblokEditable(blok)}
+    >
       {blok.title}
     </Link>
   );
