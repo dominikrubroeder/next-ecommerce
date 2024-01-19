@@ -4,7 +4,7 @@ import { Suspense } from "react";
 import StoryblokNavigation from "@/components/navigation/storyblok-navigation/StoryblokNavigation";
 import StoryblokNavigationLoading from "@/components/navigation/storyblok-navigation/StoryblokNavigationLoading";
 import Logo from "@/components/Logo";
-import LoginLink from "@/components/auth/LoginLink";
+import AuthLink from "@/components/auth/AuthLink";
 
 export default function Header() {
   return (
@@ -47,7 +47,7 @@ export default function Header() {
         <Search placeholder="Search anything..." />
 
         <div className="space-x-4">
-          <LoginLink />
+          <AuthLink />
 
           <Link
             href="/cart"
