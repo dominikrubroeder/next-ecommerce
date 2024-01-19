@@ -5,3 +5,7 @@ export type SortingOption = {
   title: SortingOptionTitle;
   value: SortingOptionValue;
 };
+
+export type Provider = "GitHub";
+
+export type Brand = Provider;
