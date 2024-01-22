@@ -11,6 +11,10 @@ export interface Product {
   galleryImages: string[];
   tabs: { title: string; content: string }[];
   faqs: FAQ[];
+  attributes: {
+    sizes?: string[] | undefined;
+    colors?: string[] | undefined;
+  };
 }
 
 export interface Category {

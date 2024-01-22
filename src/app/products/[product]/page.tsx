@@ -13,6 +13,15 @@ export const metadata: Metadata = {
   title: "Product | Next ecommerce",
 };
 
+/**
+ * The Product Page focuses on two things:
+ * - Buy Conversion
+ * - Inform, Market, and inspire the User of the Product
+ * - BuyBar.tsx focuses on making the Product configuration accessible as easy as possible to the user
+ * - With that out of the way, the other space on the Product Page can focus on Marketing Material and Inform, inspire the user about the Product
+ * @param params
+ * @param searchParams
+ */
 export default async function ProductPage({
   params,
   searchParams,

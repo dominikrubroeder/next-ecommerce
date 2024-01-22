@@ -31,28 +31,7 @@
       "images": [],
       "galleryImages": [],
       "tabs": [],
-      "faqs": [
-        {
-          "question": "What is the warranty for this product?",
-          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
-        },
-        {
-          "question": "How can I track my order?",
-          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
-        },
-        {
-          "question": "Can I return the product if I am not satisfied?",
-          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
-        },
-        {
-          "question": "Is this product available for international shipping?",
-          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
-        },
-        {
-          "question": "How do I contact customer support?",
-          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
-        }
-      ]
+      "faqs": []
     },
     {
       "id": 2,
@@ -85,28 +64,7 @@
       "images": [],
       "galleryImages": [],
       "tabs": [],
-      "faqs": [
-        {
-          "question": "What is the warranty for this product?",
-          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
-        },
-        {
-          "question": "How can I track my order?",
-          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
-        },
-        {
-          "question": "Can I return the product if I am not satisfied?",
-          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
-        },
-        {
-          "question": "Is this product available for international shipping?",
-          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
-        },
-        {
-          "question": "How do I contact customer support?",
-          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
-        }
-      ]
+      "faqs": []
     },
     {
       "id": 3,
@@ -139,28 +97,7 @@
       "images": [],
       "galleryImages": [],
       "tabs": [],
-      "faqs": [
-        {
-          "question": "What is the warranty for this product?",
-          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
-        },
-        {
-          "question": "How can I track my order?",
-          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
-        },
-        {
-          "question": "Can I return the product if I am not satisfied?",
-          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
-        },
-        {
-          "question": "Is this product available for international shipping?",
-          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
-        },
-        {
-          "question": "How do I contact customer support?",
-          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
-        }
-      ]
+      "faqs": []
     },
     {
       "id": 4,
@@ -202,28 +139,7 @@
           "content": "Tab 5 content"
         }
       ],
-      "faqs": [
-        {
-          "question": "What is the warranty for this product?",
-          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
-        },
-        {
-          "question": "How can I track my order?",
-          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
-        },
-        {
-          "question": "Can I return the product if I am not satisfied?",
-          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
-        },
-        {
-          "question": "Is this product available for international shipping?",
-          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
-        },
-        {
-          "question": "How do I contact customer support?",
-          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
-        }
-      ]
+      "faqs": []
     },
     {
       "id": 5,
@@ -252,28 +168,50 @@
         "/products/iphone-15-pro-gallery-02.jpeg"
       ],
       "tabs": [],
-      "faqs": [
+      "faqs": []
+    },
+    {
+      "id": 6,
+      "title": "T-Shirt",
+      "price": 19.99,
+      "description": "This is a T-Shirt, super comfy. Every day – long lasting",
+      "variants": [
         {
-          "question": "What is the warranty for this product?",
-          "answer": "Our product comes with a 1-year limited warranty. Please refer to the warranty information provided with the product for more details."
+          "id": "6-01",
+          "title": "T-Shirt",
+          "price": 19.99,
+          "description": "This is a T-Shirt, super comfy. Every day – long lasting"
         },
         {
-          "question": "How can I track my order?",
-          "answer": "Once your order is shipped, you will receive a tracking number via email. You can use this tracking number to monitor the status of your shipment."
-        },
-        {
-          "question": "Can I return the product if I am not satisfied?",
-          "answer": "Yes, we offer a 30-day return policy. If you are not satisfied with your purchase, you can return the product within 30 days for a full refund, minus the shipping fees."
-        },
-        {
-          "question": "Is this product available for international shipping?",
-          "answer": "Yes, we offer international shipping. Shipping costs and delivery times may vary depending on the destination. Please check our shipping information for more details."
-        },
-        {
-          "question": "How do I contact customer support?",
-          "answer": "You can contact our customer support team by emailing support@example.com or by calling our toll-free number at 1-800-123-4567. Our support team is available Monday to Friday, 9 am to 5 pm."
+          "id": "6-02",
+          "title": "T-Shirt",
+          "price": 19.99,
+          "description": "This is a T-Shirt, super comfy. Every day – long lasting"
         }
-      ]
+      ],
+      "manufacturer": "Manufacturer Inc.",
+      "path": "/products/t-shirt",
+      "category": "Clothing",
+      "images": [],
+      "galleryImages": [],
+      "tabs": [],
+      "faqs": [],
+      "attributes": {
+        "sizes": [
+          "xs",
+          "s",
+          "m",
+          "l",
+          "xl"
+        ],
+        "colors": [
+          "red",
+          "blue",
+          "white",
+          "gray",
+          "black"
+        ]
+      }
     }
   ],
   "categories": [
@@ -291,6 +229,11 @@
       "id": 3,
       "title": "Tech",
       "path": "/categories/tech"
+    },
+    {
+      "id": 5,
+      "title": "Clothing",
+      "path": "/categories/clothing"
     },
     {
       "id": 4,
@@ -346,6 +289,13 @@
         "1",
         "4",
         "5"
+      ]
+    },
+    {
+      "question": "How should i wash this shirt?",
+      "answer": "Description here...",
+      "products": [
+        "6"
       ]
     }
   ]
