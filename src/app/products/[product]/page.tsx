@@ -7,6 +7,7 @@ import ProductImageGallery from "@/components/product/image-gallery/ProductImage
 import { Suspense } from "react";
 import ProductFAQsLoading from "@/components/product/faqs/ProductFAQsLoading";
 import ProductFAQs from "@/components/product/faqs/ProductFAQs";
+import BuyBar from "@/components/product/buy-bar/BuyBar";
 
 export const metadata: Metadata = {
   title: "Product | Next ecommerce",
@@ -69,16 +70,12 @@ export default async function ProductPage({
         This is a new section
       </section>
 
-      <section className="sticky bottom-0 z-50 flex items-center justify-end gap-4 border-t bg-white p-4">
-        <div className="font-bold">{product.price} €</div>
+      <BuyBar product={product} />
 
-        <button
-          title="Add productId to Cart"
-          className="rounded-xl border px-4 py-3"
-        >
-          Buy
-        </button>
-      </section>
+      {/* <section className="flex min-h-dvh items-center justify-center">
+              This is a new section which is focused on marketing. Thats why the
+              sticky `BuyBar` stops scrolling with here.
+          </section> */}
     </div>
   );
 }

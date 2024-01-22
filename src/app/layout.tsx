@@ -52,7 +52,7 @@ export default async function RootLayout({
 
   return (
     <html lang="en">
-      <body className={inter.className}>
+      <body className={`grid grid-rows-[auto_1fr_auto] ${inter.className}`}>
         <SessionProvider session={session}>
           <Header />
           <main>{children}</main>

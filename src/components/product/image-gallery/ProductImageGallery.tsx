@@ -45,12 +45,13 @@ export default function ProductImageGallery({
 
   return images.length > 0 ? (
     <div>
-      <div className="relative mx-auto h-80 w-80 sm:h-96 sm:w-96">
+      <div className="relative mx-auto">
         <Image
           src={images[selectedImage ?? 0]}
-          className="mx-auto object-contain"
+          className="mx-auto h-80 w-80 object-contain sm:h-96 sm:w-96"
           alt={`${productTitle} image ${selectedImage}`}
-          fill
+          width={320}
+          height={320}
           priority
           draggable={false}
         />
