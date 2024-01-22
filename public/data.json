@@ -31,7 +31,11 @@
       "images": [],
       "galleryImages": [],
       "tabs": [],
-      "faqs": []
+      "faqs": [],
+      "attributes": {
+        "sizes": [],
+        "colors": []
+      }
     },
     {
       "id": 2,
@@ -64,7 +68,11 @@
       "images": [],
       "galleryImages": [],
       "tabs": [],
-      "faqs": []
+      "faqs": [],
+      "attributes": {
+        "sizes": [],
+        "colors": []
+      }
     },
     {
       "id": 3,
@@ -97,7 +105,11 @@
       "images": [],
       "galleryImages": [],
       "tabs": [],
-      "faqs": []
+      "faqs": [],
+      "attributes": {
+        "sizes": [],
+        "colors": []
+      }
     },
     {
       "id": 4,
@@ -139,7 +151,11 @@
           "content": "Tab 5 content"
         }
       ],
-      "faqs": []
+      "faqs": [],
+      "attributes": {
+        "sizes": [],
+        "colors": []
+      }
     },
     {
       "id": 5,
@@ -168,7 +184,11 @@
         "/products/iphone-15-pro-gallery-02.jpeg"
       ],
       "tabs": [],
-      "faqs": []
+      "faqs": [],
+      "attributes": {
+        "sizes": [],
+        "colors": []
+      }
     },
     {
       "id": 6,
