@@ -61,9 +61,9 @@ export default function ProductImageGallery({
         {[...Array(images.length).keys()].map((_, index) => (
           <li
             key={index}
-            className={` cursor-pointer rounded-full transition ${
+            className={` cursor-pointer rounded-full border transition ${
               index === selectedImage
-                ? "h-3 w-3 bg-orange-400"
+                ? "h-3 w-3 border-transparent bg-orange-400"
                 : "h-2.5 w-2.5 bg-gray-100"
             }`}
             onClick={() => onClick(index.toString())}

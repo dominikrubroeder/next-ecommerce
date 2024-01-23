@@ -15,7 +15,7 @@ export default function ProductTab({
   return (
     <Link
       href={`${productPath}?tab=${tab}`}
-      className={`cursor-pointer rounded-2xl p-4 transition ${selectedClassName(
+      className={`cursor-pointer rounded-2xl border p-4 transition ${selectedClassName(
         index,
         tab,
         searchParamsTab,
