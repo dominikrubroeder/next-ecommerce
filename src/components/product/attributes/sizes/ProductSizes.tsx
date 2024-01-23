@@ -1,20 +1,21 @@
 "use client";
 
-import { useState } from "react";
+import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function ProductSizes({
   sizes,
 }: {
   sizes: string[] | undefined;
 }) {
-  const [selectedSize, setSelectedSize] = useState(sizes ? sizes[0] : 0);
+  const { updateSearchParams, searchParams } = useUpdateSearchParams();
+  const selectedSize = searchParams.get("size");
 
   if (sizes === null || sizes === undefined || sizes.length === 0) return null;
 
   return (
     <div className="flex items-center gap-4">
       <div className="inline-block">Sizes:</div>
-      <ul className="space-x-4 overflow-x-scroll whitespace-nowrap">
+      <ul className="space-x-4 overflow-x-auto whitespace-nowrap">
         {sizes.map((size) => (
           <li key={size} className="inline-block">
             <button
@@ -25,7 +26,13 @@ export default function ProductSizes({
               }`}
               title={`Select Product Size ${size}`}
               aria-label={`Select Product Size ${size}`}
-              onClick={() => setSelectedSize(size)}
+              onClick={() =>
+                updateSearchParams({
+                  withName: "size",
+                  withValue: size,
+                  withCleanup: false,
+                })
+              }
             >
               {size}
             </button>

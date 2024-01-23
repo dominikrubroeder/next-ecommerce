@@ -1,21 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function ProductColors({
   colors,
 }: {
   colors: string[] | undefined;
 }) {
-  const [selectedColor, setSelectedColor] = useState(colors ? colors[0] : 0);
+  const { updateSearchParams, searchParams } = useUpdateSearchParams();
+  const selectedColor = searchParams.get("color");
 
   if (colors === null || colors === undefined || colors.length === 0)
     return null;
 
   return (
-    <div className="flex items-center gap-4">
+    <div className="relative flex w-full items-center gap-4 overflow-auto whitespace-nowrap">
       <div className="inline-block">Colors:</div>
-      <ul className="space-x-4" aria-label="Current product colors">
+
+      <ul
+        className="inline-block space-x-4"
+        aria-label="Current product colors"
+      >
         {colors.map((color, index) => (
           <li key={color} className="inline-block">
             <button
@@ -26,7 +31,13 @@ export default function ProductColors({
               }`}
               title={`Select Product Color ${color}`}
               aria-label={`Select Product Color ${color}`}
-              onClick={() => setSelectedColor(color)}
+              onClick={() =>
+                updateSearchParams({
+                  withName: "color",
+                  withValue: color,
+                  withCleanup: false,
+                })
+              }
             >
               <span
                 className="block h-4 w-4 shrink-0 rounded-full border"
