@@ -72,7 +72,7 @@ export default function ProductImageGallery({
       </ul>
     </div>
   ) : (
-    <div className="mx-auto flex h-80 w-80 items-center justify-center rounded-2xl bg-gray-100 xl:h-96 xl:w-96">
+    <div className="mx-auto flex h-80 w-80 items-center justify-center rounded-2xl border bg-gray-100 xl:h-96 xl:w-96">
       <PhotoIcon className="h-20 w-20 text-gray-200" />
     </div>
   );

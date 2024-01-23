@@ -22,7 +22,7 @@ export default function Accordion({
   const [open, setOpen] = useState(initiallyOpen);
 
   return (
-    <div className="rounded-2xl bg-gray-100">
+    <div className="rounded-2xl border bg-gray-100">
       <header
         className="flex cursor-pointer select-none items-center justify-between gap-2 rounded-2xl p-4"
         onClick={() => setOpen((prevState) => !prevState)}

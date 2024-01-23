@@ -7,7 +7,7 @@ export default function Product({ product }: { product: Product }) {
   return (
     <Link
       href={product.path}
-      className="flex items-center gap-4 rounded-xl px-4 py-3 hover:bg-gray-100"
+      className="flex items-center gap-4 rounded-xl border border-transparent px-4 py-3 hover:border-gray-200 hover:bg-gray-50"
       title={`Go to ${product.title} page`}
     >
       <div className="relative flex h-12 w-12 items-center justify-center overflow-hidden rounded-2xl border p-2">
