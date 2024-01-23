@@ -1,7 +1,6 @@
-"use server";
-
-import { getStoryblokApi } from "@storyblok/react";
+import { getStoryblokApi } from "@storyblok/react/rsc";
 import { redirect } from "next/navigation";
+import { unstable_noStore as noStore } from "next/cache";
 
 export async function fetchStoryblokStory({
   name,
@@ -10,6 +9,8 @@ export async function fetchStoryblokStory({
   name: string;
   version?: "draft" | "published";
 }) {
+  noStore();
+
   try {
     const storyblokApi = getStoryblokApi();
 
