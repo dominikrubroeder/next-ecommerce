@@ -4,7 +4,7 @@ export default function Brand({ brand }: { brand: Brand }) {
   const className = "h-8 w-8";
 
   switch (brand) {
-    case "GitHub":
+    case "github":
       return (
         <svg
           width="131"

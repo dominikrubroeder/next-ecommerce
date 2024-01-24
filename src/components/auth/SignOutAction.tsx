@@ -1,7 +1,6 @@
-import { ReactNode } from "react";
 import { signOut } from "@/auth";
 
-export default function SignOutAction({ children }: { children?: ReactNode }) {
+export default function SignOutAction() {
   return (
     <form
       action={async () => {
@@ -9,7 +8,6 @@ export default function SignOutAction({ children }: { children?: ReactNode }) {
         await signOut();
       }}
     >
-      <p>{children}</p>
       <button type="submit" title="Sign out" aria-label="Sign out">
         Sign out
       </button>

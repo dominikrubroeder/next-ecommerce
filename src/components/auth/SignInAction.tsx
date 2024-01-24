@@ -7,17 +7,16 @@ export default function SignInAction({ provider }: { provider: Provider }) {
     <form
       action={async () => {
         "use server";
-        await signIn("github");
+        await signIn(provider);
       }}
     >
-      <p>You are not logged in</p>
       <button
         type="submit"
         className="flex items-center justify-center gap-2 rounded-2xl border px-4 py-3"
         title={`Sign in with ${provider}`}
         aria-label={`Sign out from ${provider}`}
       >
-        <Brand brand={provider} /> Sign in with {provider}
+        <Brand brand={provider} />
       </button>
     </form>
   );

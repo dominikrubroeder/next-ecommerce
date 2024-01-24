@@ -24,7 +24,7 @@ export default function AuthForm() {
         Login
       </button>
 
-      <SignInAction provider="GitHub" />
+      <SignInAction provider="github" />
     </div>
   );
 }

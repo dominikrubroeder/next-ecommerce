@@ -6,6 +6,6 @@ export type SortingOption = {
   value: SortingOptionValue;
 };
 
-export type Provider = "GitHub";
+export type Provider = "github";
 
 export type Brand = Provider;
