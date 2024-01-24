@@ -42,14 +42,10 @@ export default async function ProductPage({
       </div>
 
       <section className="grid gap-8 p-4 md:grid-cols-2 md:gap-4">
-        <div className="grid gap-8">
-          <ProductImageGallery
-            images={product.images}
-            productTitle={product.title}
-          />
-
-          <ProductTabs tabs={product.tabs} />
-        </div>
+        <ProductImageGallery
+          images={product.images}
+          productTitle={product.title}
+        />
 
         <div>
           <div className="flex flex-wrap items-center justify-between gap-2">
@@ -61,13 +57,21 @@ export default async function ProductPage({
 
           <p>{product.description}</p>
 
-          <div className="mt-5 space-y-6">
-            <h2 className="border-b pb-5 font-bold">FAQs</h2>
+          <section className="mt-5 space-y-2">
+            <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
+              Tabs
+            </h2>
+            <ProductTabs tabs={product.tabs} />
+          </section>
 
+          <section className="mt-5 space-y-6">
+            <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
+              FAQs
+            </h2>
             <Suspense fallback={<ProductFAQsLoading />}>
               <ProductFAQs productId={product.id.toString()} />
             </Suspense>
-          </div>
+          </section>
         </div>
       </section>
 
