@@ -48,11 +48,7 @@ export default async function ProductPage({
             productTitle={product.title}
           />
 
-          <ProductTabs
-            tabs={product.tabs}
-            searchParamsTab={searchParams.tab}
-            productPath={product.path}
-          />
+          <ProductTabs tabs={product.tabs} />
         </div>
 
         <div>

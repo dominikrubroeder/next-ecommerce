@@ -58,15 +58,15 @@ export const filterProducts = (
   return sortedProducts;
 };
 
-export function selectedClassName(
+export function selectedTabClassName(
   index: number,
   tabTitle: string,
-  searchParamsTab: undefined | string,
+  searchParamsTab: string | null,
 ) {
-  return (index === 0 && searchParamsTab === undefined) ||
+  return (index === 0 && searchParamsTab === null) ||
     tabTitle.toLowerCase() === searchParamsTab?.toLowerCase()
-    ? "bg-gray-100"
-    : "bg-transparent";
+    ? "bg-gray-100 border-gray-200"
+    : "bg-transparent border-transparent";
 }
 
 export function capitalize(text: string) {
