@@ -1,10 +1,7 @@
 import { getCategories } from "@/lib";
 import Category from "@/components/categories/Category";
-import { unstable_noStore } from "next/cache";
 
 export default async function Categories() {
-  unstable_noStore();
-
   const categories = await getCategories();
 
   if (

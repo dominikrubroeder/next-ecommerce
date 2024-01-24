@@ -1,7 +1,6 @@
 import Product from "@/components/product/Product";
 import { getProducts } from "@/lib";
 import { filterProducts } from "@/lib/helpers";
-import { unstable_noStore } from "next/cache";
 
 export default async function Products({
   filter,
@@ -16,8 +15,6 @@ export default async function Products({
   category?: string | undefined;
   searchTerm?: string | undefined;
 }) {
-  unstable_noStore();
-
   const products = category
     ? await getProducts("category", category)
     : searchTerm

@@ -1,14 +1,11 @@
 import { getFAQs } from "@/lib";
 import Accordion from "@/components/Accordion";
-import { unstable_noStore } from "next/cache";
 
 export default async function ProductFAQs({
   productId,
 }: {
   productId: string;
 }) {
-  unstable_noStore();
-
   const faqs = await getFAQs(productId);
 
   if (faqs === null || faqs === undefined || faqs.length === 0) return null;

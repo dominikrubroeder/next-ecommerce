@@ -2,12 +2,15 @@
 
 import { Category, FAQ, Product } from "@/interfaces";
 import { promises as fs } from "fs";
+import { unstable_noStore as noStore } from "next/cache";
 
 export async function getData(): Promise<{
   products: Product[];
   categories: Category[];
   faqs: FAQ[];
 }> {
+  noStore();
+
   if (process.env.NODE_ENV === "development") {
     const res = await fs.readFile(process.cwd() + "/public/data.json", "utf8");
     return JSON.parse(res);
@@ -23,6 +26,8 @@ export async function getProducts(
   forPageType?: "category" | "search",
   filterValue?: string,
 ): Promise<Product[]> {
+  noStore();
+
   const { products } = await getData();
 
   if (forPageType === undefined || filterValue === undefined) {
@@ -61,11 +66,15 @@ export async function getProducts(
 }
 
 export async function getCategories(): Promise<Category[]> {
+  noStore();
+
   const { categories } = await getData();
   return categories;
 }
 
 export async function getFAQs(forProduct: string) {
+  noStore();
+
   const { faqs } = await getData();
 
   if (forProduct)
