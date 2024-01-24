@@ -14,7 +14,7 @@ export async function fetchStoryblokStory({
   try {
     const storyblokApi = getStoryblokApi();
 
-    return await storyblokApi.get(`cdn/stories${name}`, {
+    return storyblokApi.get(`cdn/stories${name}`, {
       version: version,
     });
   } catch (error) {
