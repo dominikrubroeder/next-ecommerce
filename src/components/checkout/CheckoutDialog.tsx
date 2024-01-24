@@ -1,10 +1,8 @@
 "use client";
 
-import { useSession } from "next-auth/react";
 import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function CheckoutDialog() {
-  const { data } = useSession();
   const { updateSearchParams, searchParams } = useUpdateSearchParams();
 
   const appear = searchParams.get("instantCheckout");
@@ -25,7 +23,7 @@ export default function CheckoutDialog() {
       }
     >
       <dialog
-        className="no-scrollbar animate-fade-up h-[50dvh] w-[40dvw] overflow-y-auto overflow-x-hidden rounded-2xl bg-white"
+        className="no-scrollbar h-[50dvh] w-[40dvw] animate-fade-up overflow-y-auto overflow-x-hidden rounded-2xl bg-white"
         open
       >
         <header className="sticky top-0 z-10 border-b bg-white px-8 py-6">
@@ -36,8 +34,6 @@ export default function CheckoutDialog() {
           <section className="mt-4 px-8">
             <h2 className="sticky top-0 mb-4 border-b pb-2">Login</h2>
             <div className="grid gap-4">
-              <p>{data?.user?.name}</p>
-              <p>{data?.user?.email}</p>
               {/* Pay with Apple, PayPal Express, Amazon Pay etc... */}
               <div className="min-w-xs h-8 animate-pulse rounded-full border bg-gray-100"></div>
               <div className="min-w-xs h-8 animate-pulse rounded-full border bg-gray-100"></div>
