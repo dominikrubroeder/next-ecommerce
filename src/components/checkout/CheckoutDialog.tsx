@@ -11,11 +11,17 @@ export default function CheckoutDialog() {
 
   if (!appear || appear !== "true") return null;
 
+  {
+    /* Show black background behind Dialog modal */
+  }
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/10"
       onClick={() =>
-        updateSearchParams({ withName: "instantCheckout", withValue: "false" })
+        updateSearchParams({
+          withName: "instantCheckout",
+          withValue: "false",
+        })
       }
     >
       <dialog
@@ -59,13 +65,19 @@ export default function CheckoutDialog() {
           </section>
         </div>
 
-        <footer className="sticky bottom-0 flex items-center justify-end border-t bg-white px-4 py-3">
-          <span className="mr-4">
-            Total: <b>19.99€</b>
-          </span>
-          <button className="rounded-2xl bg-accent px-4 py-3 text-white">
-            <span>Submit Order</span>
+        <footer className="sticky bottom-0 flex items-center justify-between border-t bg-white px-4 py-3">
+          <button className="px-4 py-3 text-gray-400 transition hover:text-black">
+            <span>Continue Shopping</span>
           </button>
+
+          <div>
+            <span className="mr-4">
+              Total: <b>19.99€</b>
+            </span>
+            <button className="rounded-2xl bg-accent px-4 py-3 text-white">
+              <span>Submit Order</span>
+            </button>
+          </div>
         </footer>
       </dialog>
     </div>
