@@ -12,25 +12,14 @@ export default function ProductAttributes({
   };
 }) {
   return (
-    <div className="overflow-hidden">
-      <ul className="no-scrollbar grid gap-4 lg:flex lg:items-center lg:gap-8 lg:overflow-auto lg:whitespace-nowrap">
-        <li className="inline-block">
-          <ProductSizes sizes={productAttributes.sizes} />
-        </li>
+    <ul className="space-y-4">
+      <li>
+        <ProductSizes sizes={productAttributes.sizes} />
+      </li>
 
-        <li className="inline-block">
-          <ProductColors colors={productAttributes.colors} />
-        </li>
-      </ul>
-
-      <div className="mt-6 flex gap-4 lg:hidden">
-        <div>Attributes:</div>
-        <ul className="flex gap-2">
-          <li className="inline-block text-orange-400">Sizes</li>
-          <li className="text-gray-200">|</li>
-          <li className="inline-block text-orange-400">Colors</li>
-        </ul>
-      </div>
-    </div>
+      <li>
+        <ProductColors colors={productAttributes.colors} />
+      </li>
+    </ul>
   );
 }

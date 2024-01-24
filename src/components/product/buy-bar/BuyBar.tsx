@@ -3,7 +3,6 @@ import ProductQuantity from "@/components/product/quantity/ProductQuantity";
 import ProductPrice from "@/components/product/price/ProductPrice";
 import AddToCartButton from "@/components/product/actions/AddToCartButton";
 import BuyButton from "@/components/product/actions/BuyButton";
-import ProductAttributes from "@/components/product/attributes/ProductAttributes";
 
 /**
  * Summarizes all relevant Product Data and actions for the user in `a sticky UI Bar`.
@@ -14,9 +13,7 @@ import ProductAttributes from "@/components/product/attributes/ProductAttributes
  */
 export default function BuyBar({ product }: { product: Product }) {
   return (
-    <section className="sticky bottom-0 z-50 mt-10 grid gap-4 overflow-hidden border-b border-t bg-white p-4 lg:flex lg:items-center lg:justify-between lg:gap-0">
-      <ProductAttributes productAttributes={product.attributes} />
-
+    <section className="sticky bottom-0 z-50 mt-10 border-b border-t bg-white p-4">
       <div className="flex shrink-0 flex-wrap items-center justify-between gap-4 lg:justify-end lg:border-l lg:pl-8 2xl:border-l-0 2xl:pl-0">
         <ProductQuantity />
 

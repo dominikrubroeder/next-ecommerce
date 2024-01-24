@@ -14,8 +14,8 @@ export default function ProductColors({
     return null;
 
   return (
-    <div className="relative flex w-full items-center gap-4 overflow-auto whitespace-nowrap">
-      <div className="inline-block">Colors:</div>
+    <div className="space-y-4">
+      <div>Colors:</div>
 
       <ul
         className="inline-block space-x-4"

@@ -9,6 +9,7 @@ import ProductFAQsLoading from "@/components/product/faqs/ProductFAQsLoading";
 import ProductFAQs from "@/components/product/faqs/ProductFAQs";
 import BuyBar from "@/components/product/buy-bar/BuyBar";
 import CheckoutDialog from "@/components/checkout/CheckoutDialog";
+import ProductAttributes from "@/components/product/attributes/ProductAttributes";
 
 export const metadata: Metadata = {
   title: "Product | Next ecommerce",
@@ -62,6 +63,15 @@ export default async function ProductPage({
 
           <p>{product.description}</p>
 
+          {product.attributes && (
+            <section className="mt-5 space-y-2">
+              <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
+                Attributes
+              </h2>
+              <ProductAttributes productAttributes={product.attributes} />
+            </section>
+          )}
+
           {product.tabs.length > 0 && (
             <section className="mt-5 space-y-2">
               <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
@@ -84,6 +94,10 @@ export default async function ProductPage({
 
       <BuyBar product={product} />
 
+      {/* This is a new section which is focused on Marketing and Information materials. That's why the sticky `BuyBar` stops scrolling here.
+          But you could of course also move the `BuyBar` down to the bottom entirely, so the BuyBar will be visible at all time at the bottom of the page
+      */}
+
       <section className="mt-20 min-h-dvh">
         <div className="sticky top-0 mx-5 border-b py-5">
           <div className="flex flex-wrap items-center gap-2">
@@ -102,14 +116,11 @@ export default async function ProductPage({
         </div>
       </section>
 
+      {/* Add Marketing placeholders here */}
+
+      {/* Add recommended slider here */}
+
       <CheckoutDialog />
-
-      {/* Add placeholders here */}
-
-      {/* <section className="flex min-h-dvh items-center justify-center">
-              This is a new section which is focused on marketing. Thats why the
-              sticky `BuyBar` stops scrolling with here.
-          </section> */}
     </div>
   );
 }

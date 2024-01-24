@@ -13,8 +13,9 @@ export default function ProductSizes({
   if (sizes === null || sizes === undefined || sizes.length === 0) return null;
 
   return (
-    <div className="flex items-center gap-4">
-      <div className="inline-block">Sizes:</div>
+    <div className="space-y-4">
+      <div>Sizes:</div>
+
       <ul className="space-x-4 overflow-x-auto whitespace-nowrap">
         {sizes.map((size) => (
           <li key={size} className="inline-block">
