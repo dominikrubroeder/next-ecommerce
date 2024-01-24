@@ -1,7 +1,13 @@
 import {useCallback} from "react";
 import {usePathname, useRouter, useSearchParams} from "next/navigation";
 
-/** To use in `Client Components` */
+/** To use in `Client Components`
+ * - Mark your Component with 'use client' at the top of your file
+ * - This hook can be used for updating all kind of Search Params
+ * - Why use Search Params: https://nextjs.org/learn/dashboard-app/adding-search-and-pagination#why-use-url-search-params
+ * - You lift the state up to the URL, make it shareable, and easily handle Server State in the URL
+ * - Examples: Filter on PLPs, ProductTabs, ProductQuantity, ProductImageGallery, ...
+ * */
 export const useUpdateSearchParams = () => {
   const router = useRouter();
   const pathname = usePathname();
