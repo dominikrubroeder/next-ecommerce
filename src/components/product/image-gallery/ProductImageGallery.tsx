@@ -1,7 +1,8 @@
 "use client";
+
 import Image from "next/image";
-import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { PhotoIcon } from "@heroicons/react/24/outline";
+import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function ProductImageGallery({
   images,
@@ -10,9 +11,8 @@ export default function ProductImageGallery({
   images: string[];
   productTitle: string;
 }) {
-  const router = useRouter();
-  const pathname = usePathname();
-  const searchParams = useSearchParams();
+  // Make this sticky
+  const { updateSearchParams, searchParams } = useUpdateSearchParams();
 
   if (images === null || images === undefined) return null;
 
@@ -20,31 +20,8 @@ export default function ProductImageGallery({
     ? 0
     : Number(searchParams.getAll("image")[0]);
 
-  const onClick = (value: string, withCleanUp?: boolean) => {
-    const current = new URLSearchParams(Array.from(searchParams.entries()));
-
-    if (withCleanUp) {
-      for (const [key] of searchParams.entries()) {
-        current.delete(key);
-      }
-    }
-
-    if (!value) {
-      current.delete("image");
-    } else if (current.getAll("image").includes(value)) {
-      current.delete("image", value);
-    } else {
-      current.set("image", value);
-    }
-
-    const search = current.toString();
-    const query = search ? `?${search}` : "";
-
-    router.push(`${pathname}${query}`, { scroll: false });
-  };
-
   return images.length > 0 ? (
-    <div>
+    <div className="pt-5">
       <div className="relative mx-auto">
         <Image
           src={images[selectedImage ?? 0]}
@@ -66,7 +43,12 @@ export default function ProductImageGallery({
                 ? "h-3 w-3 border-transparent bg-orange-400"
                 : "h-2.5 w-2.5 bg-gray-100"
             }`}
-            onClick={() => onClick(index.toString())}
+            onClick={() =>
+              updateSearchParams({
+                withName: "image",
+                withValue: index.toString(),
+              })
+            }
           ></li>
         ))}
       </ul>

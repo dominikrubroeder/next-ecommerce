@@ -34,7 +34,7 @@ export default async function ProductPage({
   if (product === null || product === undefined) return redirect("/");
 
   return (
-    <div className="grid gap-4">
+    <div className="space-y-4">
       <div className="px-4">
         <h1 className="border-b pb-5 text-4xl">Product</h1>
 
@@ -42,10 +42,14 @@ export default async function ProductPage({
       </div>
 
       <section className="grid gap-8 p-4 md:grid-cols-2 md:gap-4">
-        <ProductImageGallery
-          images={product.images}
-          productTitle={product.title}
-        />
+        <div>
+          <div className="sticky top-0">
+            <ProductImageGallery
+              images={product.images}
+              productTitle={product.title}
+            />
+          </div>
+        </div>
 
         <div>
           <div className="flex flex-wrap items-center justify-between gap-2">
