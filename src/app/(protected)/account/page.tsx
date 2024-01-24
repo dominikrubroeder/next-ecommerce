@@ -1,14 +1,13 @@
 import type { Metadata } from "next";
 import AuthForm from "@/components/auth/AuthForm";
 import SignOutAction from "@/components/auth/SignOutAction";
-import { auth } from "@/auth";
+import { useSession } from "@/hooks/useSession";
 
 export const metadata: Metadata = {
   title: "Your Account | Next ecommerce",
 };
 export default async function AccountPage() {
-  let session = await auth();
-  let user = session?.user;
+  const { session, user } = await useSession();
 
   return (
     <>
