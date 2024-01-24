@@ -1,5 +1,6 @@
 import { ArrowLongLeftIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import { capitalize } from "@/lib/helpers";
 
 export default function BackLink({
   href,
@@ -8,7 +9,7 @@ export default function BackLink({
   href: string;
   label?: string;
 }) {
-  const url = href.replace("/", "");
+  const url = capitalize(href.replace("/", ""));
 
   return (
     <Link
