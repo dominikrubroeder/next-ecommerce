@@ -34,7 +34,7 @@ export default async function ProductPage({
   if (product === null || product === undefined) return redirect("/");
 
   return (
-    <div className="space-y-4">
+    <div>
       <div className="px-4">
         <h1 className="border-b pb-5 text-4xl">Product</h1>
 
@@ -79,11 +79,25 @@ export default async function ProductPage({
         </div>
       </section>
 
-      <section className="flex min-h-dvh items-center justify-center">
-        This is a new section
-      </section>
-
       <BuyBar product={product} />
+
+      <section className="mt-20 min-h-dvh">
+        <div className="sticky top-0 mx-5 border-b py-5">
+          <div className="flex flex-wrap items-center gap-2">
+            <h3>Secondary navigation</h3>
+            <span className="block h-1 w-1 shrink-0 rounded-full bg-gray-300"></span>
+            <span className="text-gray-400">
+              You can show a sub-navigation here. For Products heavy on
+              marketing and information materials.
+            </span>
+          </div>
+        </div>
+
+        {/* Content could come from Storyblok, headless CMS, ... f.e. */}
+        <div className="flex min-h-dvh items-center justify-center">
+          This is a new marketing focused section
+        </div>
+      </section>
 
       {/* <section className="flex min-h-dvh items-center justify-center">
               This is a new section which is focused on marketing. Thats why the

@@ -14,7 +14,7 @@ import ProductAttributes from "@/components/product/attributes/ProductAttributes
  */
 export default function BuyBar({ product }: { product: Product }) {
   return (
-    <section className="sticky bottom-0 z-50 grid gap-4 overflow-hidden border-t bg-white p-4 lg:flex lg:items-center lg:justify-between lg:gap-0">
+    <section className="sticky bottom-0 z-50 mt-10 grid gap-4 overflow-hidden border-b border-t bg-white p-4 lg:flex lg:items-center lg:justify-between lg:gap-0">
       <ProductAttributes productAttributes={product.attributes} />
 
       <div className="flex shrink-0 flex-wrap items-center justify-between gap-4 lg:justify-end lg:border-l lg:pl-8 2xl:border-l-0 2xl:pl-0">
