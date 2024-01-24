@@ -1,28 +1,29 @@
+"use client";
+
 import { selectedClassName } from "@/lib/helpers";
-import Link from "next/link";
+import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
 export default function ProductTab({
   tab,
   searchParamsTab,
   index,
-  productPath,
 }: {
   tab: string;
   searchParamsTab: undefined | string;
   index: number;
-  productPath: string;
 }) {
+  const { updateSearchParams } = useUpdateSearchParams();
+
   return (
-    <Link
-      href={`${productPath}?tab=${tab}`}
+    <button
       className={`cursor-pointer rounded-2xl border p-4 transition ${selectedClassName(
         index,
         tab,
         searchParamsTab,
       )}`}
-      scroll={false}
+      onClick={() => updateSearchParams({ withName: "tab", withValue: tab })}
     >
       {tab}
-    </Link>
+    </button>
   );
 }

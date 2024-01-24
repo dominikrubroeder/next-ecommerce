@@ -24,7 +24,7 @@ export const useUpdateSearchParams = () => {
     [searchParams],
   );
 
-  const createQueryStringURL = useCallback(
+  const updatedSearchParamsUrl = useCallback(
     ({
       withName,
       withValue,
@@ -45,13 +45,16 @@ export const useUpdateSearchParams = () => {
     withName,
     withValue,
     withCleanup,
+    scroll = false,
   }: {
     withName: string;
     withValue: string;
     withCleanup?: boolean;
+    scroll?: boolean;
   }) => {
     router.push(
       pathname + "?" + createQueryString(withName, withValue, withCleanup),
+      { scroll: scroll },
     );
   };
 
@@ -59,8 +62,7 @@ export const useUpdateSearchParams = () => {
     router: router,
     pathname: pathname,
     searchParams: searchParams,
-    createQueryString: createQueryString,
-    updatedSearchParamURL: createQueryStringURL,
     updateSearchParams: updateSearchParams,
+    updatedSearchParamsUrl: updatedSearchParamsUrl,
   };
 };
