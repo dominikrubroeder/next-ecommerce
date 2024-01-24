@@ -8,6 +8,7 @@ import { Suspense } from "react";
 import ProductFAQsLoading from "@/components/product/faqs/ProductFAQsLoading";
 import ProductFAQs from "@/components/product/faqs/ProductFAQs";
 import BuyBar from "@/components/product/buy-bar/BuyBar";
+import CheckoutDialog from "@/components/checkout/CheckoutDialog";
 
 export const metadata: Metadata = {
   title: "Product | Next ecommerce",
@@ -61,12 +62,14 @@ export default async function ProductPage({
 
           <p>{product.description}</p>
 
-          <section className="mt-5 space-y-2">
-            <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
-              Tabs
-            </h2>
-            <ProductTabs tabs={product.tabs} />
-          </section>
+          {product.tabs.length > 0 && (
+            <section className="mt-5 space-y-2">
+              <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
+                Tabs
+              </h2>
+              <ProductTabs tabs={product.tabs} />
+            </section>
+          )}
 
           <section className="mt-5 space-y-6">
             <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
@@ -98,6 +101,10 @@ export default async function ProductPage({
           This is a new marketing focused section
         </div>
       </section>
+
+      <CheckoutDialog />
+
+      {/* Add placeholders here */}
 
       {/* <section className="flex min-h-dvh items-center justify-center">
               This is a new section which is focused on marketing. Thats why the

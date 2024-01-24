@@ -1,23 +1,26 @@
 "use client";
 
-import { useRef } from "react";
 import { useSession } from "next-auth/react";
+import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 
-export default function CheckoutDialog({ open }: { open: boolean }) {
-  const dialog = useRef<HTMLDialogElement | null>(null);
+export default function CheckoutDialog() {
   const { data } = useSession();
+  const { updateSearchParams, searchParams } = useUpdateSearchParams();
 
-  if (!open) return null;
+  const appear = searchParams.get("instantCheckout");
+
+  if (!appear || appear !== "true") return null;
 
   return (
     <div
       className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden bg-black/10"
-      onClick={() => dialog.current?.close()}
+      onClick={() =>
+        updateSearchParams({ withName: "instantCheckout", withValue: "false" })
+      }
     >
       <dialog
-        ref={dialog}
-        className="no-scrollbar h-[50dvh] w-[33dvw] overflow-y-auto overflow-x-hidden rounded-2xl bg-white"
-        open={open}
+        className="no-scrollbar animate-fade-up h-[50dvh] w-[40dvw] overflow-y-auto overflow-x-hidden rounded-2xl bg-white"
+        open
       >
         <header className="sticky top-0 z-10 border-b bg-white px-8 py-6">
           <h2 className="text-4xl">Checkout</h2>
