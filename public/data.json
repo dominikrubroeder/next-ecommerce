@@ -2,7 +2,7 @@
   "products": [
     {
       "id": 1,
-      "title": "Product 1",
+      "title": "Jacket",
       "price": 99.99,
       "description": "This is Product 1, and it's super amazing",
       "variants": [
@@ -39,7 +39,7 @@
     },
     {
       "id": 2,
-      "title": "Product 2",
+      "title": "Snowboard",
       "price": 129.99,
       "description": "This is Product 2, and it's super amazing",
       "variants": [
@@ -159,7 +159,7 @@
     },
     {
       "id": 5,
-      "title": "Product 5",
+      "title": "Gloves",
       "price": 84.99,
       "description": "This is Product 5, and it's super amazing",
       "variants": [
