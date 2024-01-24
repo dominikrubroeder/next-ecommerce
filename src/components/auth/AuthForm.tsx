@@ -1,4 +1,4 @@
-import SignInButton from "@/components/auth/SignInButton";
+import SignInAction from "@/components/auth/SignInAction";
 
 export default function AuthForm() {
   return (
@@ -24,7 +24,7 @@ export default function AuthForm() {
         Login
       </button>
 
-      <SignInButton provider="GitHub" />
+      <SignInAction provider="GitHub" />
     </div>
   );
 }

@@ -1,13 +1,14 @@
 import type { Metadata } from "next";
-import { getServerSession } from "next-auth";
 import AuthForm from "@/components/auth/AuthForm";
-import SignOutButton from "@/components/auth/SignOutButton";
+import SignOutAction from "@/components/auth/SignOutAction";
+import { auth } from "@/auth";
 
 export const metadata: Metadata = {
   title: "Your Account | Next ecommerce",
 };
 export default async function AccountPage() {
-  const session = await getServerSession();
+  let session = await auth();
+  let user = session?.user;
 
   return (
     <>
@@ -17,8 +18,8 @@ export default async function AccountPage() {
         <section className="py-4">
           {session ? (
             <>
-              <div>User: {session?.user?.name}</div>
-              <div>Email: {session?.user?.email}</div>
+              <div>User: {user?.name}</div>
+              <div>Email: {user?.email}</div>
             </>
           ) : (
             <AuthForm />
@@ -28,7 +29,7 @@ export default async function AccountPage() {
 
       {session ? (
         <div className="fixed bottom-0 flex w-full items-center justify-end border-t bg-white p-4">
-          <SignOutButton />
+          <SignOutAction />
         </div>
       ) : null}
     </>

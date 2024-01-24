@@ -18,8 +18,6 @@ import Navigation from "@/components/storyblok/navigation/Navigation";
 import NavigationLink from "@/components/storyblok/navigation/NavigationLink";
 import NavigationLayout from "@/components/storyblok/navigation/NavigationLayout";
 import NavigationConfig from "@/components/storyblok/navigation/NavigationConfig";
-import { getServerSession } from "next-auth";
-import SessionProvider from "@/components/auth/SessionProvider";
 
 storyblokInit({
   accessToken: "TRy8fro6F6vWWbhtsbcTaAtt",
@@ -43,21 +41,17 @@ export const metadata: Metadata = {
   description: "Next App with base foundations of common ecommerce pages",
 };
 
-export default async function RootLayout({
+export default function RootLayout({
   children,
 }: {
   children: React.ReactNode;
 }) {
-  const session = await getServerSession();
-
   return (
     <html lang="en">
       <body className={`grid grid-rows-[auto_1fr_auto] ${inter.className}`}>
-        <SessionProvider session={session}>
-          <Header />
-          <main>{children}</main>
-          <Footer />
-        </SessionProvider>
+        <Header />
+        <main>{children}</main>
+        <Footer />
 
         <Analytics />
         <SpeedInsights />
