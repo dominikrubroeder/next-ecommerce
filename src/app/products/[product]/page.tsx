@@ -26,10 +26,8 @@ export const metadata: Metadata = {
  */
 export default async function ProductPage({
   params,
-  searchParams,
 }: {
   params: { product: string };
-  searchParams: { tab: string | undefined };
 }) {
   const product = await getProduct(params.product);
 

@@ -21,7 +21,7 @@ export default function ProductColors({
         className="inline-block space-x-4"
         aria-label="Current product colors"
       >
-        {colors.map((color, index) => (
+        {colors.map((color) => (
           <li key={color} className="inline-block">
             <button
               className={`min-w-12 rounded-xl border px-4 py-3 text-center hover:border-gray-300 ${
