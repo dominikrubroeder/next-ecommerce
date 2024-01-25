@@ -1,5 +1,5 @@
 "use client";
-import Accordion from "@/components/Accordion";
+import Accordion from "@/components/accordion";
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 
 export default function Filter() {

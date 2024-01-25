@@ -1,15 +1,15 @@
 import { redirect } from "next/navigation";
-import BackLink from "@/components/BackLink";
+import BackLink from "@/components/back-link";
 import { getProduct } from "@/lib/product";
-import ProductTabs from "@/components/product/tabs/ProductTabs";
+import ProductTabs from "@/components/product/tabs/product-tabs";
 import type { Metadata } from "next";
-import ProductImageGallery from "@/components/product/image-gallery/ProductImageGallery";
+import ProductImageGallery from "@/components/product/image-gallery/product-image-gallery";
 import { Suspense } from "react";
-import ProductFAQsLoading from "@/components/product/faqs/ProductFAQsLoading";
-import ProductFAQs from "@/components/product/faqs/ProductFAQs";
-import BuyBar from "@/components/product/buy-bar/BuyBar";
-import CheckoutDialog from "@/components/checkout/CheckoutDialog";
-import ProductAttributes from "@/components/product/attributes/ProductAttributes";
+import ProductFaqsLoading from "@/components/product/faqs/product-faqs-loading";
+import ProductFaq from "@/components/product/faqs/product-faq";
+import BuyBar from "@/components/product/buy-bar/buy-bar";
+import CheckoutDialog from "@/components/checkout/checkout-dialog";
+import ProductAttributes from "@/components/product/attributes/product-attributes";
 
 export const metadata: Metadata = {
   title: "Product | Next ecommerce",
@@ -85,8 +85,8 @@ export default async function ProductPage({
             <h2 className="sticky top-0 border-b bg-white py-5 font-bold">
               FAQs
             </h2>
-            <Suspense fallback={<ProductFAQsLoading />}>
-              <ProductFAQs productId={product.id.toString()} />
+            <Suspense fallback={<ProductFaqsLoading />}>
+              <ProductFaq productId={product.id.toString()} />
             </Suspense>
           </section>
         </div>

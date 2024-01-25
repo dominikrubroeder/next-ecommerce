@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
-import AuthForm from "@/components/auth/AuthForm";
-import SignOutAction from "@/components/auth/SignOutAction";
+import AuthForm from "@/components/auth/auth-form";
+import SignOutAction from "@/components/auth/sign-out-action";
 import { useSession } from "@/hooks/useSession";
 
 export const metadata: Metadata = {

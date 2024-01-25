@@ -1,4 +1,4 @@
-import Brand from "@/components/Brand";
+import Brand from "@/components/brand";
 import type { Provider } from "@/types";
 import { signIn } from "@/auth";
 

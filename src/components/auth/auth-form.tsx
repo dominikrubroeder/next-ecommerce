@@ -1,4 +1,4 @@
-import SignInAction from "@/components/auth/SignInAction";
+import SignInAction from "@/components/auth/sign-in-action";
 
 export default function AuthForm() {
   return (

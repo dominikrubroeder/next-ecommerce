@@ -3,10 +3,10 @@ import {
   QueueListIcon,
   TableCellsIcon,
 } from "@heroicons/react/24/outline";
-import Sorting from "@/components/products/actions/Sorting";
-import Products from "@/components/products/Products";
+import Sorting from "@/components/products/actions/sorting";
+import Products from "@/components/products/products";
 import { Suspense } from "react";
-import ProductLoading from "@/components/product/ProductLoading";
+import ProductLoading from "@/components/product/product-loading";
 import type { Metadata } from "next";
 
 export const dynamic = "force-dynamic";

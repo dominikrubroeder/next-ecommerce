@@ -2,22 +2,22 @@ import { Analytics } from "@vercel/analytics/react";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Header from "@/components/layout/Header";
-import Footer from "@/components/layout/Footer";
+import Header from "@/components/layout/header";
+import Footer from "@/components/layout/footer";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import {
   apiPlugin,
   StoryblokBridgeLoader,
   storyblokInit,
 } from "@storyblok/react/rsc";
-import Teaser from "@/components/storyblok/Teaser";
-import Page from "@/components/storyblok/Page";
-import Feature from "@/components/storyblok/Feature";
-import Grid from "@/components/storyblok/Grid";
-import Navigation from "@/components/storyblok/navigation/Navigation";
-import NavigationLink from "@/components/storyblok/navigation/NavigationLink";
-import NavigationLayout from "@/components/storyblok/navigation/NavigationLayout";
-import NavigationConfig from "@/components/storyblok/navigation/NavigationConfig";
+import Teaser from "@/components/storyblok/teaser";
+import Page from "@/components/storyblok/page";
+import Feature from "@/components/storyblok/feature";
+import Grid from "@/components/storyblok/grid";
+import Navigation from "@/components/storyblok/navigation/navigation";
+import NavigationLink from "@/components/storyblok/navigation/navigation-link";
+import NavigationLayout from "@/components/storyblok/navigation/navigation-layout";
+import NavigationConfig from "@/components/storyblok/navigation/navigation-config";
 
 storyblokInit({
   accessToken: "TRy8fro6F6vWWbhtsbcTaAtt",

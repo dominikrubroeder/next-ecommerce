@@ -1,11 +1,7 @@
 import { getFAQs } from "@/lib";
-import Accordion from "@/components/Accordion";
+import Accordion from "@/components/accordion";
 
-export default async function ProductFAQs({
-  productId,
-}: {
-  productId: string;
-}) {
+export default async function ProductFaq({ productId }: { productId: string }) {
   const faqs = await getFAQs(productId);
 
   if (faqs === null || faqs === undefined || faqs.length === 0) return null;

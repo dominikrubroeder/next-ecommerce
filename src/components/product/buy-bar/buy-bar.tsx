@@ -1,8 +1,8 @@
 import {Product} from "@/interfaces";
-import ProductQuantity from "@/components/product/quantity/ProductQuantity";
-import ProductPrice from "@/components/product/price/ProductPrice";
-import AddToCartButton from "@/components/product/actions/AddToCartButton";
-import BuyButton from "@/components/product/actions/BuyButton";
+import ProductQuantity from "@/components/product/quantity/product-quantity";
+import ProductPrice from "@/components/product/price/product-price";
+import AddToCartButton from "@/components/product/actions/add-to-cart-button";
+import BuyButton from "@/components/product/actions/buy-button";
 
 /**
  * Summarizes all relevant Product Data and actions for the user in `a sticky UI Bar`.

@@ -1,6 +1,6 @@
 "use client";
 
-import ProductTab from "@/components/product/tabs/ProductTab";
+import ProductTab from "@/components/product/tabs/product-tab";
 import { useUpdateSearchParams } from "@/hooks/useUpdateSearchParams";
 import { selectedTabClassName } from "@/lib/helpers";
 

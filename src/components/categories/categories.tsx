@@ -1,5 +1,5 @@
 import { getCategories } from "@/lib";
-import Category from "@/components/categories/Category";
+import Category from "@/components/categories/category";
 
 export default async function Categories() {
   const categories = await getCategories();

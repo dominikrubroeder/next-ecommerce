@@ -1,4 +1,4 @@
-import NavigationConfig from "@/components/storyblok/navigation/NavigationConfig";
+import NavigationConfig from "@/components/storyblok/navigation/navigation-config";
 import { ReactNode } from "react";
 import { NavigationConfigStoryblok } from "../../../../component-types-sb";
 

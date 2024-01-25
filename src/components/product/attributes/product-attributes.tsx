@@ -1,7 +1,7 @@
 "use client";
 
-import ProductSizes from "@/components/product/attributes/sizes/ProductSizes";
-import ProductColors from "@/components/product/attributes/colors/ProductColors";
+import ProductSizes from "@/components/product/attributes/sizes/product-sizes";
+import ProductColors from "@/components/product/attributes/colors/product-colors";
 
 export default function ProductAttributes({
   productAttributes,

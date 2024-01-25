@@ -1,8 +1,8 @@
-import InlineBadge from "@/components/InlineBadge";
-import BackLink from "@/components/BackLink";
+import InlineBadge from "@/components/inline-badge";
+import BackLink from "@/components/back-link";
 import { Suspense } from "react";
-import Products from "@/components/products/Products";
-import ProductLoading from "@/components/product/ProductLoading";
+import Products from "@/components/products/products";
+import ProductLoading from "@/components/product/product-loading";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

@@ -1,6 +1,6 @@
 import { Suspense } from "react";
-import CategoriesLoading from "@/components/categories/CategoriesLoading";
-import Categories from "@/components/categories/Categories";
+import CategoriesLoading from "@/components/categories/categories-loading";
+import Categories from "@/components/categories/categories";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {

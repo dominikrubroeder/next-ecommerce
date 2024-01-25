@@ -1,10 +1,10 @@
 import Link from "next/link";
-import Search from "@/components/search/Search";
+import Search from "@/components/search/search";
 import { Suspense } from "react";
-import StoryblokNavigation from "@/components/navigation/storyblok-navigation/StoryblokNavigation";
-import StoryblokNavigationLoading from "@/components/navigation/storyblok-navigation/StoryblokNavigationLoading";
-import Logo from "@/components/Logo";
-import AuthLink from "@/components/auth/AuthLink";
+import StoryblokNavigation from "@/components/navigation/storyblok-navigation/storyblok-navigation";
+import StoryblokNavigationLoading from "@/components/navigation/storyblok-navigation/storyblok-navigation-loading";
+import Logo from "@/components/logo";
+import AuthLink from "@/components/auth/auth-link";
 
 export default function Header() {
   return (
