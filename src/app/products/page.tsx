@@ -34,7 +34,7 @@ export default function ProductsPage({
         <h1 className="text-4xl">All Products</h1>
 
         <div className="flex items-center gap-4">
-          <Sorting selected={sorting} />
+          <Sorting />
 
           <div className="flex gap-1">
             <button className="rounded-2xl bg-gray-100 p-4 transition hover:bg-gray-100">
