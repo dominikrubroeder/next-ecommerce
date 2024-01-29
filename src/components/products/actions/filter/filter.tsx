@@ -12,61 +12,76 @@ export default function Filter() {
   if (showFilters !== "true") return null;
 
   return (
-    <fieldset className="flex select-none flex-wrap gap-8">
-      <div className="space-y-4">
-        <legend className="mb-2 text-sm font-semibold">Price range</legend>
-        <div className="space-y-2">
-          {options.map((filterOption) => {
-            return filterOption.group === "Price" ? (
-              <label
-                key={filterOption.title}
-                className="flex items-center gap-2 font-normal"
-              >
-                <input
-                  type="checkbox"
-                  onChange={() =>
-                    updateSearchParams({
-                      withName: "filter",
-                      withValue: filterOption.value,
-                      append: true,
-                    })
-                  }
-                  checked={appliedFilters.includes(filterOption.value)}
-                />
-                {filterOption.title}
-              </label>
-            ) : null;
-          })}
-        </div>
+    <div>
+      <div className="mb-5 flex items-center justify-between gap-4 border-b pb-4">
+        <h3>Filter</h3>
+        <button
+          className="text-accent"
+          title="Close and apply selected filters"
+          aria-label="Close and apply selected filters"
+          onClick={() =>
+            updateSearchParams({ withName: "showFilter", withValue: "false" })
+          }
+        >
+          Done
+        </button>
       </div>
+      <fieldset className="flex select-none flex-wrap gap-8">
+        <div className="space-y-4">
+          <legend className="mb-2 text-sm font-semibold">Price range</legend>
+          <div className="space-y-2">
+            {options.map((filterOption) => {
+              return filterOption.group === "Price" ? (
+                <label
+                  key={filterOption.title}
+                  className="flex items-center gap-2 font-normal"
+                >
+                  <input
+                    type="checkbox"
+                    onChange={() =>
+                      updateSearchParams({
+                        withName: "filter",
+                        withValue: filterOption.value,
+                        append: true,
+                      })
+                    }
+                    checked={appliedFilters.includes(filterOption.value)}
+                  />
+                  {filterOption.title}
+                </label>
+              ) : null;
+            })}
+          </div>
+        </div>
 
-      <div className="space-y-4">
-        <legend className="mb-2 text-sm font-semibold">Colors</legend>
-        <div className="space-y-2">
-          {options.map((filterOption) => {
-            return filterOption.group === "Color" ? (
-              <label
-                key={filterOption.title}
-                className="flex items-center gap-2 font-normal"
-              >
-                <input
-                  type="checkbox"
-                  onChange={() =>
-                    updateSearchParams({
-                      withName: "filter",
-                      withValue: filterOption.value,
-                      append: true,
-                    })
-                  }
-                  checked={appliedFilters.includes(filterOption.value)}
-                />
-                {filterOption.title}
-              </label>
-            ) : null;
-          })}
+        <div className="space-y-4">
+          <legend className="mb-2 text-sm font-semibold">Colors</legend>
+          <div className="space-y-2">
+            {options.map((filterOption) => {
+              return filterOption.group === "Color" ? (
+                <label
+                  key={filterOption.title}
+                  className="flex items-center gap-2 font-normal"
+                >
+                  <input
+                    type="checkbox"
+                    onChange={() =>
+                      updateSearchParams({
+                        withName: "filter",
+                        withValue: filterOption.value,
+                        append: true,
+                      })
+                    }
+                    checked={appliedFilters.includes(filterOption.value)}
+                  />
+                  {filterOption.title}
+                </label>
+              ) : null;
+            })}
+          </div>
         </div>
-      </div>
-    </fieldset>
+      </fieldset>
+    </div>
   );
 }
 

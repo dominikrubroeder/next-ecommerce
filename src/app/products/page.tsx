@@ -38,8 +38,8 @@ export default function ProductsPage({
       </section>
 
       <section className="sticky bottom-0 grid gap-4 border-t bg-gray-50 px-4 py-4">
-        <Filter />
         <Sorting />
+        <Filter />
 
         <div className="grid grid-cols-2 gap-4">
           <FilterTrigger />

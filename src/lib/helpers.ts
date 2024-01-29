@@ -15,7 +15,6 @@ export const filterProducts = (
       productA.title.localeCompare(productB.title),
     );
 
-  console.log(filter);
   let filteredProducts: Product[] = [];
 
   if (typeof filter === "string") {
@@ -47,7 +46,8 @@ export const filterProducts = (
   }
 
   if (typeof filter === "object") {
-    return products;
+    filteredProducts = products;
+    return filteredProducts;
     /**
          products.map((product) => {
          for (const property in product.attributes) {
@@ -71,16 +71,20 @@ export const filterProducts = (
          */
   }
 
+  if (filter === undefined) {
+    filteredProducts = products;
+  }
+
   if (sorting === undefined) return filteredProducts;
 
   let sortedProducts: Product[];
   switch (sorting) {
-    case "titleDescending":
+    case "titleAscending":
       sortedProducts = filteredProducts.sort((productA, productB) =>
         productA.title.localeCompare(productB.title),
       );
       break;
-    case "titleAscending":
+    case "titleDescending":
       sortedProducts = filteredProducts.sort((productA, productB) =>
         productB.title.localeCompare(productA.title),
       );

@@ -13,6 +13,19 @@ export default function Sorting() {
 
   return (
     <div>
+      <div className="mb-5 flex items-center justify-between gap-4 border-b pb-4">
+        <h3>Sorting</h3>
+        <button
+          className="text-accent"
+          title="Close and apply selected sorting option"
+          aria-label="Close and apply selected sorting option"
+          onClick={() =>
+            updateSearchParams({ withName: "showSorting", withValue: "false" })
+          }
+        >
+          Done
+        </button>
+      </div>
       <div className="mb-2 text-sm font-semibold">By Title</div>
       <ul className="grid gap-2">
         {options.map((sortingOption) => (
@@ -27,10 +40,9 @@ export default function Sorting() {
                   updateSearchParams({
                     withName: "sorting",
                     withValue: sortingOption.value,
-                    append: true,
                   })
                 }
-                checked={selectedSortingOption === sortingOption.value}
+                checked={sortingOption.value === selectedSortingOption}
               />
               {sortingOption.title}
             </label>
@@ -43,13 +55,13 @@ export default function Sorting() {
 
 const options: SortingOption[] = [
   {
-    title: "Title descending",
-    value: "titleDescending",
-    icon: "BarsArrowUpIcon",
-  },
-  {
     title: "Title ascending",
     value: "titleAscending",
     icon: "BarsArrowDownIcon",
+  },
+  {
+    title: "Title descending",
+    value: "titleDescending",
+    icon: "BarsArrowUpIcon",
   },
 ];

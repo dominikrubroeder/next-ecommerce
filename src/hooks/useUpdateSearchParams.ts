@@ -32,7 +32,6 @@ export const useUpdateSearchParams = () => {
 
       /** You can add multiple Search Params of the same Type with `append: true`. F.e. with Multi-Filters */
       if (append) {
-        // console.log("entries", searchParams.entries());
         params.append(name, value);
       } else {
         params.set(name, value);
