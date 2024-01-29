@@ -24,7 +24,6 @@ export default function ProductsPage({
 }) {
   const filter = searchParams.filter;
   const sorting = searchParams.sorting;
-  const listView = searchParams.listView;
 
   return (
     <div className="grid gap-4">
@@ -32,20 +31,20 @@ export default function ProductsPage({
         <h1 className="text-4xl">All Products</h1>
       </section>
 
-      <section className="sticky top-0 mx-4 grid grid-cols-2 gap-4 bg-white pt-4">
-        <FilterTrigger />
-        <SortingTrigger />
+      <section className="min-h-dvh px-4">
+        <Suspense fallback={<ProductLoading />}>
+          <Products filter={filter} sorting={sorting} />
+        </Suspense>
       </section>
 
-      <section className="mx-4 grid grid-cols-2 gap-4">
+      <section className="sticky bottom-0 grid gap-4 border-t bg-gray-50 px-4 py-4">
         <Filter />
         <Sorting />
-      </section>
 
-      <section className="px-4">
-        <Suspense fallback={<ProductLoading />}>
-          <Products filter={filter} sorting={sorting} listView={listView} />
-        </Suspense>
+        <div className="grid grid-cols-2 gap-4">
+          <FilterTrigger />
+          <SortingTrigger />
+        </div>
       </section>
     </div>
   );

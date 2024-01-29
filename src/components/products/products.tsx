@@ -5,13 +5,11 @@ import { filterProducts } from "@/lib/helpers";
 export default async function Products({
   filter,
   sorting,
-  listView,
   category,
   searchTerm,
 }: {
   filter?: string | undefined;
   sorting?: string | undefined;
-  listView?: string | undefined;
   category?: string | undefined;
   searchTerm?: string | undefined;
 }) {
@@ -28,9 +26,7 @@ export default async function Products({
 
   return (
     <ul
-      className={`w-full ${
-        listView === "Grid" ? "sm:grid-cols-2 md:grid-cols-3" : ""
-      }`}
+      className={`grid w-full gap-4 sm:grid-cols-2 md:grid-cols-3`}
       title={`All products for category ${category}`}
       aria-label={`All products for category ${category}`}
     >
