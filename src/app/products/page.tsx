@@ -1,13 +1,11 @@
-import {
-  AdjustmentsHorizontalIcon,
-  QueueListIcon,
-  TableCellsIcon,
-} from "@heroicons/react/24/outline";
-import Sorting from "@/components/products/actions/sorting";
+import Sorting from "@/components/products/actions/sorting/sorting";
 import Products from "@/components/products/products";
 import { Suspense } from "react";
 import ProductLoading from "@/components/product/product-loading";
 import type { Metadata } from "next";
+import Filter from "@/components/products/actions/filter/filter";
+import FilterTrigger from "@/components/products/actions/filter/filter-trigger";
+import SortingTrigger from "@/components/products/actions/sorting/sorting-trigger";
 
 export const dynamic = "force-dynamic";
 
@@ -30,26 +28,18 @@ export default function ProductsPage({
 
   return (
     <div className="grid gap-4">
-      <section className="mx-4 flex justify-between gap-4 border-b pb-3.5">
+      <section className="mx-4 flex justify-between gap-4 border-b pb-5">
         <h1 className="text-4xl">All Products</h1>
+      </section>
 
-        <div className="flex items-center gap-4">
-          <Sorting />
+      <section className="sticky top-0 mx-4 grid grid-cols-2 gap-4 bg-white pt-4">
+        <FilterTrigger />
+        <SortingTrigger />
+      </section>
 
-          <div className="flex gap-1">
-            <button className="rounded-2xl bg-gray-100 p-4 transition hover:bg-gray-100">
-              <QueueListIcon className="h-4 w-4" />
-            </button>
-
-            <button className="rounded-2xl p-4 transition hover:bg-gray-100">
-              <TableCellsIcon className="h-4 w-4" />
-            </button>
-          </div>
-
-          <button className="rounded-2xl p-4 transition hover:bg-gray-100">
-            <AdjustmentsHorizontalIcon className="h-4 w-4" />
-          </button>
-        </div>
+      <section className="mx-4 grid grid-cols-2 gap-4">
+        <Filter />
+        <Sorting />
       </section>
 
       <section className="px-4">

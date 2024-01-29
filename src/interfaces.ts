@@ -1,3 +1,5 @@
+import { ProductAttributes } from "@/types";
+
 export interface Product {
   id: number;
   title: string;
@@ -11,10 +13,7 @@ export interface Product {
   galleryImages: string[];
   tabs: { title: string; content: string }[];
   faqs: FAQ[];
-  attributes: {
-    sizes?: string[] | undefined;
-    colors?: string[] | undefined;
-  };
+  attributes: ProductAttributes;
 }
 
 export interface Category {

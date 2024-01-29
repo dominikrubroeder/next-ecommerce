@@ -1,4 +1,5 @@
 import { Product } from "@/interfaces";
+import { FilterValue } from "@/types";
 
 export const formatProductTitle = (productTitle: string) => {
   return productTitle.toLowerCase().trim().replaceAll(" ", "-");
@@ -14,21 +15,60 @@ export const filterProducts = (
       productA.title.localeCompare(productB.title),
     );
 
-  let filteredProducts: Product[];
-  switch (filter) {
-    case "price-under-50":
-      filteredProducts = products.filter((product) => product.price < 50);
-      break;
-    case "price-50-100":
-      filteredProducts = products.filter(
-        (product) => product.price > 50 && product.price < 100,
-      );
-      break;
-    case "price-over-100":
-      filteredProducts = products.filter((product) => product.price > 100);
-      break;
-    default:
-      filteredProducts = products;
+  console.log(filter);
+  let filteredProducts: Product[] = [];
+
+  if (typeof filter === "string") {
+    switch (filter as FilterValue) {
+      case "price-under-50":
+        filteredProducts = products.filter((product) => product.price < 50);
+        break;
+      case "price-50-100":
+        filteredProducts = products.filter(
+          (product) => product.price > 50 && product.price < 100,
+        );
+        break;
+      case "price-over-100":
+        filteredProducts = products.filter((product) => product.price > 100);
+        break;
+      case "color-red":
+        filteredProducts = products.filter(
+          (product) => product.attributes.colors?.includes("red"),
+        );
+        break;
+      case "color-blue":
+        filteredProducts = products.filter(
+          (product) => product.attributes.colors?.includes("blue"),
+        );
+        break;
+      default:
+        filteredProducts = products;
+    }
+  }
+
+  if (typeof filter === "object") {
+    return products;
+    /**
+         products.map((product) => {
+         for (const property in product.attributes) {
+         const propertyValue = product.attributes[property];
+
+         filter.map((currentFilter) => {
+         const currentFilterValue = currentFilter.split("-")[1];
+         console.log("CURRENT_FILTER_VALUE:", currentFilterValue);
+         if ((propertyValue as string).includes(currentFilterValue)) {
+         if (
+         !products.find(
+         (currentProduct) => currentProduct.id === product.id,
+         )
+         ) {
+         filteredProducts.push(product);
+         }
+         }
+         });
+         }
+         });
+         */
   }
 
   if (sorting === undefined) return filteredProducts;
@@ -44,12 +84,6 @@ export const filterProducts = (
       sortedProducts = filteredProducts.sort((productA, productB) =>
         productB.title.localeCompare(productA.title),
       );
-      break;
-    case "New":
-      sortedProducts = [
-        ...filteredProducts.filter((product) => product.price < 100),
-        ...filteredProducts.filter((product) => product.price > 100),
-      ];
       break;
     default:
       sortedProducts = filteredProducts;

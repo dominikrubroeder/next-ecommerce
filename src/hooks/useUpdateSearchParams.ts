@@ -14,16 +14,29 @@ export const useUpdateSearchParams = () => {
   const searchParams = useSearchParams();
 
   const createQueryString = useCallback(
-    (name: string, value: string, withCleanup?: boolean) => {
+    (name: string, value: string, append?: boolean, withCleanup?: boolean) => {
       const params = new URLSearchParams(searchParams);
 
+      /** For some Search Params, you want to clean up all currently present other Search Params first */
       if (withCleanup) {
         for (const [key] of searchParams.entries()) {
           params.delete(key);
         }
       }
 
-      params.set(name, value);
+      /** Delete when filter should be applied, that is already applied (toggle filter) */
+      if (params.has(name, value)) {
+        params.delete(name, value);
+        return params.toString();
+      }
+
+      /** You can add multiple Search Params of the same Type with `append: true`. F.e. with Multi-Filters */
+      if (append) {
+        // console.log("entries", searchParams.entries());
+        params.append(name, value);
+      } else {
+        params.set(name, value);
+      }
 
       return params.toString();
     },
@@ -50,16 +63,20 @@ export const useUpdateSearchParams = () => {
   const updateSearchParams = ({
     withName,
     withValue,
+    append,
     withCleanup,
     scroll = false,
   }: {
     withName: string;
     withValue: string;
+    append?: boolean;
     withCleanup?: boolean;
     scroll?: boolean;
   }) => {
     router.push(
-      pathname + "?" + createQueryString(withName, withValue, withCleanup),
+      pathname +
+        "?" +
+        createQueryString(withName, withValue, append, withCleanup),
       { scroll: scroll },
     );
   };

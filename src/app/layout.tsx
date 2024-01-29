@@ -50,7 +50,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`grid grid-rows-[auto_1fr_auto] ${inter.className}`}>
         <Header />
-        <main>{children}</main>
+        <main className="min-h-dvh">{children}</main>
         <Footer />
 
         <Analytics />
