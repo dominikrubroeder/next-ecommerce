@@ -23,12 +23,16 @@ export async function getData(): Promise<{
 }
 
 export async function getProducts(
+  ids?: string[],
   forPageType?: "category" | "search",
   filterValue?: string,
 ): Promise<Product[]> {
   noStore();
 
   const { products } = await getData();
+
+  if (ids)
+    return products.filter((product) => ids.includes(product.id.toString()));
 
   if (forPageType === undefined || filterValue === undefined) {
     return products;
