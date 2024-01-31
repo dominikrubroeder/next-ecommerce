@@ -1,30 +1,15 @@
 import { redirect } from "next/navigation";
-import { getProducts } from "@/lib";
+import { getOrder, getProducts } from "@/lib";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { CreditCardIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
-
-const orderData = [
-  {
-    id: "xyz",
-    ordered: new Date().toLocaleDateString("de-DE", {
-      weekday: "long",
-      year: "numeric",
-      month: "long",
-      day: "numeric",
-    }),
-    products: ["1", "3", "4"],
-  },
-];
 
 export default async function OrderPage({
   searchParams,
 }: {
   searchParams: { id: string };
 }) {
-  const order = orderData.find(
-    (currentOrder) => currentOrder.id === searchParams.id,
-  );
+  const order = await getOrder(searchParams.id);
 
   if (order === null || order === undefined) return redirect("/account");
 
@@ -42,9 +27,29 @@ export default async function OrderPage({
             </div>
 
             <div className="flex gap-2">
-              <button>Contact</button>
-              <button className="text-red-400">Return</button>
-              <button className="text-red-400">Cancel Order</button>
+              <button
+                className="rounded border border-green-200 bg-green-50 px-4 py-3 text-green-500 transition hover:border-green-400"
+                aria-label={`Start returning order ${order.id}`}
+                title={`Start returning order ${order.id}`}
+              >
+                Contact
+              </button>
+
+              <button
+                className="rounded border border-red-100 bg-red-50 px-4 py-3 text-red-400 transition hover:border-red-400"
+                aria-label={`Start returning order ${order.id}`}
+                title={`Start returning order ${order.id}`}
+              >
+                Return
+              </button>
+
+              <button
+                className="rounded border border-red-100 bg-red-50 px-4 py-3 text-red-400 transition hover:border-red-400"
+                aria-label={`Cancel order ${order.id}`}
+                title={`Cancel order ${order.id}`}
+              >
+                Cancel Order
+              </button>
             </div>
           </div>
 
@@ -79,16 +84,21 @@ export default async function OrderPage({
           <div className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-green-400"></span>
             Shipped
-            <span className="text-gray-400">
-              to Stressaddr. 1, 01234 Some City
-            </span>
+            <span className="text-gray-400">to {order.shipmentAddress}</span>
           </div>
 
           <div className="flex items-center gap-2">
             <span className="inline-block h-2 w-2 rounded-full bg-green-400"></span>
             Payed by
             <span className="flex items-center gap-1 text-gray-400">
-              Credit Card, <CreditCardIcon className="h-4 w-4" /> Ending ***1234
+              {order.paymentMethod},
+              {order.paymentMethod === "Credit Card" ? (
+                <span className="ml-1 flex items-center gap-1">
+                  <CreditCardIcon className="h-4 w-4 shrink-0" /> Ending ***1234
+                </span>
+              ) : (
+                <span className="ml-1">{order.paymentMethod}</span>
+              )}
             </span>
           </div>
         </section>

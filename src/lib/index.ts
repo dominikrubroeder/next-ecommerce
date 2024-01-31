@@ -1,6 +1,6 @@
 "use server";
 
-import { Category, FAQ, Product } from "@/interfaces";
+import { Category, FAQ, Order, Product } from "@/interfaces";
 import { promises as fs } from "fs";
 import { unstable_noStore as noStore } from "next/cache";
 
@@ -8,6 +8,7 @@ export async function getData(): Promise<{
   products: Product[];
   categories: Category[];
   faqs: FAQ[];
+  orders: Order[];
 }> {
   noStore();
 
@@ -85,4 +86,22 @@ export async function getFAQs(forProduct: string) {
     return faqs.filter((faq) => faq.products.includes(forProduct));
 
   return faqs;
+}
+
+export async function getOrder(id: string) {
+  noStore();
+
+  const { orders } = await getData();
+
+  return orders.find((order) => order.id === id);
+}
+
+export async function getOrders(ids?: string[]) {
+  noStore();
+
+  const { orders } = await getData();
+
+  if (ids) return orders.filter((order) => ids.includes(order.id));
+
+  return orders;
 }

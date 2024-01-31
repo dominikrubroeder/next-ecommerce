@@ -27,3 +27,17 @@ export interface FAQ {
   answer: string;
   products: string[];
 }
+
+export interface Order {
+  id: string;
+  ordered: string;
+  products: string[];
+  paymentStatus: "Waiting for Payment" | "Payment";
+  paymentColor: "green-400" | "orange-400";
+  paymentMethod: "Credit Card" | "PayPal" | "Invoice";
+  paymentMethodOwner: string;
+  shipmentStatus: "Order received" | "Packaged" | "In Transit" | "Shipped";
+  shipmentStatusColor: "green-400" | "orange-400";
+  shipmentAddress: string;
+  sum: number;
+}
