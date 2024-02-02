@@ -7,7 +7,7 @@ export default function SortingTrigger() {
 
   return (
     <button
-      className="border bg-white p-4"
+      className="rounded border bg-white p-4"
       aria-label="Show Sorting options"
       title="Show all Sorting options"
       onClick={() =>
