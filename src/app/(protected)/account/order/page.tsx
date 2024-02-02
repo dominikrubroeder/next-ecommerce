@@ -3,6 +3,7 @@ import { getOrder, getProducts } from "@/lib";
 import { ArrowRightIcon } from "@heroicons/react/20/solid";
 import { CreditCardIcon } from "@heroicons/react/24/outline";
 import Link from "next/link";
+import StatusButton from "@/components/button/status-button";
 
 export default async function OrderPage({
   searchParams,
@@ -27,29 +28,29 @@ export default async function OrderPage({
             </div>
 
             <div className="flex gap-2">
-              <button
-                className="rounded border border-green-200 bg-green-50 px-4 py-3 text-green-500 transition hover:border-green-400"
-                aria-label={`Start returning order ${order.id}`}
-                title={`Start returning order ${order.id}`}
+              <StatusButton
+                status="All-right"
+                ariaLabel={`Contact support for order ${order.id}`}
+                title={`Contact support for order ${order.id}`}
               >
                 Contact
-              </button>
+              </StatusButton>
 
-              <button
-                className="rounded border border-red-100 bg-red-50 px-4 py-3 text-red-400 transition hover:border-red-400"
-                aria-label={`Start returning order ${order.id}`}
+              <StatusButton
+                status="Danger"
+                ariaLabel={`Start returning order ${order.id}`}
                 title={`Start returning order ${order.id}`}
               >
                 Return
-              </button>
+              </StatusButton>
 
-              <button
-                className="rounded border border-red-100 bg-red-50 px-4 py-3 text-red-400 transition hover:border-red-400"
-                aria-label={`Cancel order ${order.id}`}
+              <StatusButton
+                status="Danger"
+                ariaLabel={`Cancel order ${order.id}`}
                 title={`Cancel order ${order.id}`}
               >
                 Cancel Order
-              </button>
+              </StatusButton>
             </div>
           </div>
 
