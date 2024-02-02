@@ -11,13 +11,6 @@ export const metadata: Metadata = {
 export default async function AccountPage() {
   const { session, user } = await useSession();
 
-  const today = new Date().toLocaleDateString("de-DE", {
-    weekday: "long",
-    year: "numeric",
-    month: "long",
-    day: "numeric",
-  });
-
   return session ? (
     <div className="mt-4 grid gap-8">
       <div className="mx-4">
