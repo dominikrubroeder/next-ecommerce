@@ -14,10 +14,10 @@ export default async function Products({
   searchTerm?: string | undefined;
 }) {
   const products = category
-    ? await getProducts("category", category)
+    ? await getProducts({ forPageType: "category", filterValue: category })
     : searchTerm
-      ? await getProducts("search", searchTerm)
-      : await getProducts();
+      ? await getProducts({ forPageType: "search", filterValue: searchTerm })
+      : await getProducts({});
 
   if (products === null || products === undefined || products.length === 0)
     return <div>No Products listed.</div>;

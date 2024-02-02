@@ -14,7 +14,7 @@ export default async function OrderPage({
 
   if (order === null || order === undefined) return redirect("/account");
 
-  const products = await getProducts(order.products);
+  const products = await getProducts({ ids: order.products });
 
   return (
     <div>

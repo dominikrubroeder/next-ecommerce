@@ -23,11 +23,15 @@ export async function getData(): Promise<{
   }
 }
 
-export async function getProducts(
-  ids?: string[],
-  forPageType?: "category" | "search",
-  filterValue?: string,
-): Promise<Product[]> {
+export async function getProducts({
+  forPageType,
+  filterValue,
+  ids,
+}: {
+  forPageType?: "category" | "search";
+  filterValue?: string;
+  ids?: string[];
+}): Promise<Product[]> {
   noStore();
 
   const { products } = await getData();
