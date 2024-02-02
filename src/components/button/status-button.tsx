@@ -1,7 +1,7 @@
 "use client";
 
 import { ReactNode } from "react";
-import clsx from "clsx";
+import { clsx } from "clsx";
 
 export default function StatusButton({
   status,
