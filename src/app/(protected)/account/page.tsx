@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import AuthForm from "@/components/auth/auth-form";
 import { useSession } from "@/hooks/useSession";
-import Collapsable from "@/components/Collapsable";
+import Collapsable from "@/components/collapsable";
 import { Suspense } from "react";
 import Orders from "@/components/orders/orders";
 
