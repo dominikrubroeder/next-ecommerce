@@ -23,47 +23,47 @@ export async function getData(): Promise<{
   }
 }
 
-export async function getProducts({
-  forPageType,
-  filterValue,
-  ids,
-}: {
-  forPageType?: "category" | "search";
-  filterValue?: string;
+export async function getProducts(options?: {
   ids?: string[];
+  forPageType?: "category" | "search";
+  withPageTypeValue?: string;
 }): Promise<Product[]> {
   noStore();
+
+  const ids = options?.ids;
+  const pageType = options?.forPageType;
+  const pageTypeValue = options?.withPageTypeValue;
 
   const { products } = await getData();
 
   if (ids)
     return products.filter((product) => ids.includes(product.id.toString()));
 
-  if (forPageType === undefined || filterValue === undefined) {
+  if (pageType === undefined || pageTypeValue === undefined) {
     return products;
   }
 
-  switch (forPageType) {
+  switch (pageType) {
     case "category":
       return products.filter(
         (product) =>
-          product.category.toLowerCase() === filterValue.toLowerCase(),
+          product.category.toLowerCase() === pageTypeValue.toLowerCase(),
       );
     case "search":
       const productsByProductTitle = products.filter((product) =>
-        product.title.toLowerCase().includes(filterValue.toLowerCase()),
+        product.title.toLowerCase().includes(pageTypeValue.toLowerCase()),
       );
 
       if (productsByProductTitle.length > 0) return productsByProductTitle;
 
       const productsByCategory = products.filter((product) =>
-        product.category.toLowerCase().includes(filterValue.toLowerCase()),
+        product.category.toLowerCase().includes(pageTypeValue.toLowerCase()),
       );
 
       if (productsByCategory.length > 0) return productsByCategory;
 
       const productsById = products.filter(
-        (product) => product.id.toString() === filterValue.toLowerCase(),
+        (product) => product.id.toString() === pageTypeValue.toLowerCase(),
       );
 
       if (productsById.length > 0) return productsById;

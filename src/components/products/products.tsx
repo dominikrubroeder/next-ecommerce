@@ -14,9 +14,15 @@ export default async function Products({
   searchTerm?: string | undefined;
 }) {
   const products = category
-    ? await getProducts({ forPageType: "category", filterValue: category })
+    ? await getProducts({
+        forPageType: "category",
+        withPageTypeValue: category,
+      })
     : searchTerm
-      ? await getProducts({ forPageType: "search", filterValue: searchTerm })
+      ? await getProducts({
+          forPageType: "search",
+          withPageTypeValue: searchTerm,
+        })
       : await getProducts({});
 
   if (products === null || products === undefined || products.length === 0)
@@ -26,7 +32,7 @@ export default async function Products({
 
   return (
     <ul
-      className={`grid w-full gap-4 sm:grid-cols-2 md:grid-cols-3`}
+      className="grid w-full gap-4 sm:grid-cols-2 md:grid-cols-3"
       title={`All products for category ${category}`}
       aria-label={`All products for category ${category}`}
     >
